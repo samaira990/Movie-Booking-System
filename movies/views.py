@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect ,get_object_or_404
 from .models import Movie,Theater,Seat,Booking
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
+from django.core.paginator import Paginator
+
 
 def movie_list(request):
     genres = request.GET.getlist('genres')
@@ -28,8 +30,19 @@ def movie_list(request):
         sort = 'release_date'
 
     movies = movies.order_by(sort)
+    
+    paginator = Paginator(movies, 10)  # 10 movies per page
+    page = request.GET.get('page')
+    movies = paginator.get_page(page)
 
-    return render(request, 'movies/movie_list.html', {'movie': movies})
+    return render(request, 'movies/movie_list.html', {
+        'movie': movies,
+        'selected_genres': genres,
+        'selected_languages': languages,
+        'selected_sort': sort,
+        'search_query': search_query
+    })
+    # return render(request, 'movies/movie_list.html', {'movie': movies})
 
 def theater_list(request,movie_id):
     movie = get_object_or_404(Movie,id=movie_id)
