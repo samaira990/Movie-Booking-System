@@ -10,6 +10,8 @@ def movie_list(request):
     languages = request.GET.getlist('languages')
     search_query = request.GET.get('search')
    
+    sort = request.GET.get('sort', 'release_date')
+
     movies = Movie.objects.all()
 
     if search_query:
@@ -20,6 +22,12 @@ def movie_list(request):
 
     if languages:
         movies = movies.filter(languages__id__in=languages).distinct()
+
+    allowed_sorts = ['release_date', 'rating', 'title']
+    if sort not in allowed_sorts:
+        sort = 'release_date'
+
+    movies = movies.order_by(sort)
 
     return render(request, 'movies/movie_list.html', {'movie': movies})
 
