@@ -1,15 +1,27 @@
+from urllib import request
+
 from django.shortcuts import render, redirect ,get_object_or_404
 from .models import Movie,Theater,Seat,Booking
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 
 def movie_list(request):
-    search_query=request.GET.get('search')
+    genres = request.GET.getlist('genres')
+    languages = request.GET.getlist('languages')
+    search_query = request.GET.get('search')
+   
+    movies = Movie.objects.all()
+
     if search_query:
-        movies=Movie.objects.filter(name__icontains=search_query)
-    else:
-        movies=Movie.objects.all()
-    return render(request,'movies/movie_list.html',{'movie':movies})
+        movies = movies.filter(name__icontains=search_query)
+
+    if genres:
+        movies = movies.filter(genres__id__in=genres).distinct()
+
+    if languages:
+        movies = movies.filter(languages__id__in=languages).distinct()
+
+    return render(request, 'movies/movie_list.html', {'movie': movies})
 
 def theater_list(request,movie_id):
     movie = get_object_or_404(Movie,id=movie_id)
