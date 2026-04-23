@@ -7,16 +7,67 @@
   <div class="row justify-content-center mb-5">
     <div class="col-md-8">
       <form method="GET" action="{% url 'movie_list' %}" class="search-bar">
-        <div class="input-group">
-          <input class="form-control form-control-lg" name="search"
-            placeholder="Search for Movies, Events, Plays, Sports and Activities" type="text"
-            value="{{ request.GET.search|default_if_none:'' }}" aria-label="Search for movies" />
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="submit">
-              <i class="fas fa-search"></i> Search
-            </button>
+        < method="GET" action="{% url 'movie_list' %}" class="search-bar">
+
+          <!-- SEARCH -->
+          <div class="input-group">
+            <input class="form-control form-control-lg" name="search" placeholder="Search for Movies..." type="text"
+              value="{{ search_query }}" aria-label="Search for movies" />
+
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit">
+                Search
+              </button>
+            </div>
           </div>
-        </div>
+
+          <!-- GENRES -->
+          <h5>Genres</h5>
+          {% for g in genre_counts %}
+          <label>
+            <input type="checkbox" name="genres" value="{{ g.id }}" {% if g.id|stringformat:"s" in selected_genres
+              %}checked{% endif %} {% if g.movie_count==0 %}disabled{% endif %}>
+
+            {{ g.name }} ({{ g.movie_count }})
+          </label>
+          <br>
+          {% endfor %}
+
+          <!-- LANGUAGES -->
+          <h5>Languages</h5>
+          {% for l in language_counts %}
+          <label>
+            <input type="checkbox" name="languages" value="{{ l.id }}" {% if l.id|stringformat:"s" in selected_languages
+              %}checked{% endif %} {% if l.movie_count==0 %}disabled{% endif %}>
+
+            {{ l.name }} ({{ l.movie_count }})
+          </label>
+          <br>
+          {% endfor %}
+
+          <!-- SORT -->
+          <select name="sort">
+            <option value="release_date" {% if selected_sort=='release_date' %}selected{% endif %}>Release Date</option>
+            <option value="rating" {% if selected_sort=='rating' %}selected{% endif %}>Rating</option>
+            <option value="title" {% if selected_sort=='title' %}selected{% endif %}>Title</option>
+          </select>
+
+          <br><br>
+
+          <!-- APPLY FILTER BUTTON -->
+          <button type="submit" class="btn btn-success">Apply Filters</button>
+
+
+          <div class="input-group">
+            <input class="form-control form-control-lg" name="search"
+              placeholder="Search for Movies, Events, Plays, Sports and Activities" type="text"
+              value="{{ request.GET.search|default_if_none:'' }}" aria-label="Search for movies" />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search"></i> Search
+              </button>
+            </div>
+          </div>
       </form>
     </div>
   </div>
