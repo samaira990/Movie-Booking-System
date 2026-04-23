@@ -30,6 +30,8 @@ def movie_list(request):
         sort = 'release_date'
 
     movies = movies.order_by(sort)
+
+    movies = movies.prefetch_related('genres', 'languages')
     
     paginator = Paginator(movies, 10)  # 10 movies per page
     page = request.GET.get('page')
