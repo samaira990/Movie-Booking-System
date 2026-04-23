@@ -1,17 +1,18 @@
 from urllib import request
 
 from django.shortcuts import render, redirect ,get_object_or_404
-from .models import Movie,Theater,Seat,Booking
+from .models import Movie,Theater,Seat,Booking, Genre, Language
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 from django.core.paginator import Paginator
+from django.db.models import Count, Q
 
 
 def movie_list(request):
     genres = request.GET.getlist('genres')
     languages = request.GET.getlist('languages')
     search_query = request.GET.get('search')
-   
+
     sort = request.GET.get('sort', 'release_date')
 
     movies = Movie.objects.all()
@@ -32,6 +33,23 @@ def movie_list(request):
     movies = movies.order_by(sort)
 
     movies = movies.prefetch_related('genres', 'languages')
+
+    filtered_movies = movies
+
+    genre_counts = Genre.objects.annotate(
+        movie_count=Count(
+            'movie',  # ⚠️ may need change
+            filter=Q(movie__in=filtered_movies)
+        )
+    )
+
+    language_counts = Language.objects.annotate(
+        movie_count=Count(
+            'movie',  # ⚠️ may need change
+            filter=Q(movie__in=filtered_movies)
+        )
+    )
+
     
     paginator = Paginator(movies, 10)  # 10 movies per page
     page = request.GET.get('page')
@@ -42,8 +60,11 @@ def movie_list(request):
         'selected_genres': genres,
         'selected_languages': languages,
         'selected_sort': sort,
-        'search_query': search_query
+        'search_query': search_query,
+        'genre_counts': genre_counts,
+        'language_counts': language_counts
     })
+
     # return render(request, 'movies/movie_list.html', {'movie': movies})
 
 def theater_list(request,movie_id):
