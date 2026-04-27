@@ -38,14 +38,14 @@ def movie_list(request):
 
     genre_counts = Genre.objects.annotate(
         movie_count=Count(
-            'movie',  # ⚠️ may need change
+            'movies',  
             filter=Q(movie__in=filtered_movies)
         )
     )
 
     language_counts = Language.objects.annotate(
         movie_count=Count(
-            'movie',  # ⚠️ may need change
+            'movies',  
             filter=Q(movie__in=filtered_movies)
         )
     )
