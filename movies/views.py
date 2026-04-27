@@ -9,61 +9,49 @@ from django.db.models import Count, Q
 
 
 def movie_list(request):
-    genres = request.GET.getlist('genres')
-    languages = request.GET.getlist('languages')
-    search_query = request.GET.get('search')
-
-    sort = request.GET.get('sort', 'name')
-
     movies = Movie.objects.all()
 
-    # 🔍 FILTERING
+    # 🔍 SEARCH
+    search_query = request.GET.get('search', '')
     if search_query:
         movies = movies.filter(name__icontains=search_query)
 
-    if genres:
-        movies = movies.filter(genres__id__in=genres).distinct()
+    # 🎭 GENRES FILTER
+    selected_genres = request.GET.getlist('genres')
+    if selected_genres:
+        movies = movies.filter(genre__id__in=selected_genres).distinct()
 
-    if languages:
-        movies = movies.filter(languages__id__in=languages).distinct()
-
-    # ✅ IMPORTANT: capture BEFORE sorting/pagination
-    filtered_movies = movies
+    # 🌐 LANGUAGES FILTER
+    selected_languages = request.GET.getlist('languages')
+    if selected_languages:
+        movies = movies.filter(language__id__in=selected_languages).distinct()
 
     # 🔽 SORTING
-    allowed_sorts = ['name', 'rating']
-    if sort not in allowed_sorts:
-        sort = 'name'
+    selected_sort = request.GET.get('sort', 'name')
+    if selected_sort == 'rating':
+        movies = movies.order_by('-rating')
+    else:
+        movies = movies.order_by('name')
 
-    movies = movies.order_by(sort)
-
-    # ⚡ OPTIMIZATION
-    movies = movies.prefetch_related('genres', 'languages')
-
-    # 🎯 COUNTS (FIXED)
+    # 📊 GENRE COUNTS (IMPORTANT)
     genre_counts = Genre.objects.annotate(
-        movie_count=Count('movies', filter=Q(movies__in=filtered_movies))
+        movie_count=Count('movie')
     )
 
+    # 📊 LANGUAGE COUNTS
     language_counts = Language.objects.annotate(
-        movie_count=Count('movies', filter=Q(movies__in=filtered_movies))
+        movie_count=Count('movie')
     )
-
-    # 📄 PAGINATION
-    paginator = Paginator(movies, 10)
-    page = request.GET.get('page')
-    movies = paginator.get_page(page)
 
     return render(request, 'movies/movie_list.html', {
         'movies': movies,
-        'selected_genres': genres,
-        'selected_languages': languages,
-        'selected_sort': sort,
-        'search_query': search_query,
         'genre_counts': genre_counts,
-        'language_counts': language_counts
+        'language_counts': language_counts,
+        'selected_genres': selected_genres,
+        'selected_languages': selected_languages,
+        'selected_sort': selected_sort,
+        'search_query': search_query,
     })
-
 def theater_list(request,movie_id):
     movie = get_object_or_404(Movie,id=movie_id)
     theater=Theater.objects.filter(movie=movie)
