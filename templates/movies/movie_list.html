@@ -14,13 +14,15 @@
 
     <!-- SEARCH -->
     <div class="input-group mb-3">
-      <input type="text" name="search" class="form-control" placeholder="Search movies..." value="{{ search_query }}">
+      <input type="text" name="search" class="form-control"
+             placeholder="Search movies..."
+             value="{{ search_query }}">
       <button class="btn btn-primary">Search</button>
     </div>
 
     <div class="row">
 
-     <!-- 🎭 GENRES -->
+      <!-- 🎭 GENRES -->
       <div class="col-md-4">
         <div class="card p-3 mb-3">
           <h5>Genres</h5>
@@ -29,18 +31,11 @@
           <div class="form-check">
 
             <input class="form-check-input"
-                  type="checkbox"
-                  name="genres"
-                  value="{{ g.id }}"
-                  
-                  {% if g.id|stringformat:"s" in selected_genres %}
-                    checked
-                  {% endif %}
-                  
-                  {% if g.movie_count == 0 %}
-                    disabled
-                  {% endif %}
-            >
+                   type="checkbox"
+                   name="genres"
+                   value="{{ g.id }}"
+                   {% if g.id|stringformat:"s" in selected_genres %}checked{% endif %}
+                   {% if g.movie_count == 0 %}disabled{% endif %}>
 
             <label class="form-check-label">
               {{ g.name }} ({{ g.movie_count }})
@@ -56,17 +51,24 @@
       <div class="col-md-4">
         <div class="card p-3 mb-3">
           <h5>Languages</h5>
+
           {% for l in language_counts %}
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="languages" value="{{ l.id }}" {% if
-              l.id|stringformat:"s" in selected_languages %}checked{% endif %} {% if l.movie_count==0 %}disabled{% endif
-              %}>
+
+            <input class="form-check-input"
+                   type="checkbox"
+                   name="languages"
+                   value="{{ l.id }}"
+                   {% if l.id|stringformat:"s" in selected_languages %}checked{% endif %}
+                   {% if l.movie_count == 0 %}disabled{% endif %}>
 
             <label class="form-check-label">
               {{ l.name }} ({{ l.movie_count }})
             </label>
+
           </div>
           {% endfor %}
+
         </div>
       </div>
 
@@ -74,16 +76,27 @@
       <div class="col-md-4">
         <div class="card p-3 mb-3">
           <h5>Sort By</h5>
+
           <select name="sort" class="form-select">
-            <option value="name" {% if selected_sort=='name' %}selected{% endif %}>Name</option>
-            <option value="rating" {% if selected_sort=='rating' %}selected{% endif %}>Rating</option>
+            <option value="name"
+              {% if selected_sort == 'name' %}selected{% endif %}>
+              Name
+            </option>
+
+            <option value="rating"
+              {% if selected_sort == 'rating' %}selected{% endif %}>
+              Rating
+            </option>
           </select>
+
         </div>
       </div>
 
     </div>
 
-    <button type="submit" class="btn btn-success w-100">Apply Filters</button>
+    <button type="submit" class="btn btn-success w-100">
+      Apply Filters
+    </button>
 
   </form>
 
@@ -94,12 +107,15 @@
 
       <div class="card h-100 shadow-sm">
 
-        <img src="{{ m.image.url }}" class="card-img-top" style="height:300px; object-fit:cover;">
+        <img src="{{ m.image.url }}"
+             class="card-img-top"
+             style="height:300px; object-fit:cover;">
 
         <div class="card-body">
 
           <h5 class="card-title">
-            <a href="{% url 'movie_detail' m.id %}" style="text-decoration:none; color:black;">
+            <a href="{% url 'movie_detail' m.id %}"
+               style="text-decoration:none; color:black;">
               {{ m.name }}
             </a>
           </h5>
@@ -113,7 +129,8 @@
         </div>
 
         <div class="card-footer bg-white border-top-0">
-          <a href="{% url 'theater_list' m.id %}" class="btn btn-outline-primary w-100">
+          <a href="{% url 'theater_list' m.id %}"
+             class="btn btn-outline-primary w-100">
             View Theaters
           </a>
         </div>
@@ -121,6 +138,7 @@
       </div>
 
     </div>
+
     {% empty %}
     <div class="col-12 text-center">
       <p>No movies found.</p>
@@ -132,7 +150,8 @@
   <div class="mt-4 text-center">
 
     {% if movies.has_previous %}
-    <a href="?page={{ movies.previous_page_number }}" class="btn btn-outline-primary">Previous</a>
+      <a href="?page={{ movies.previous_page_number }}"
+         class="btn btn-outline-primary">Previous</a>
     {% endif %}
 
     <span class="mx-2">
@@ -140,7 +159,8 @@
     </span>
 
     {% if movies.has_next %}
-    <a href="?page={{ movie.next_page_number }}" class="btn btn-outline-primary">Next</a>
+      <a href="?page={{ movies.next_page_number }}"
+         class="btn btn-outline-primary">Next</a>
     {% endif %}
 
   </div>
