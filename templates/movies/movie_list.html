@@ -29,7 +29,7 @@
           <div class="form-check">
 
             <input class="form-check-input" type="checkbox" name="genres" value="{{ g.id }}" {% if g.id|stringformat:"s"
-              in selected_genres %}checked{% endif %} {% if g.movie_count==0 %}disabled{% endif %}>
+              in selected_genres %} checked {% endif %} {% if g.movie_count==0 %} disabled {% endif %}>
 
             <label class="form-check-label">
               {{ g.name }} ({{ g.movie_count }})
