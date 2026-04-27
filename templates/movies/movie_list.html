@@ -56,15 +56,8 @@
         <div class="card p-3 mb-3">
           <h5>Sort By</h5>
           <select name="sort" class="form-select">
-            <option value="release_date" {% if selected_sort=='release_date' %}selected{% endif %}>
-              Release Date
-            </option>
-            <option value="rating" {% if selected_sort=='rating' %}selected{% endif %}>
-              Rating
-            </option>
-            <option value="title" {% if selected_sort=='title' %}selected{% endif %}>
-              Title
-            </option>
+            <option value="name" {% if selected_sort=='name' %}selected{% endif %}>Name</option>
+            <option value="rating" {% if selected_sort=='rating' %}selected{% endif %}>Rating</option>
           </select>
         </div>
       </div>

@@ -23,6 +23,8 @@ class Movie(models.Model):
     cast= models.TextField()
     description= models.TextField(blank=True,null=True) # optional
 
+    release_date = models.DateField(null=True, blank=True)
+
     genres = models.ManyToManyField(Genre, related_name='movies')
     languages = models.ManyToManyField(Language, related_name='movies')
 

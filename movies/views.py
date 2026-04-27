@@ -13,7 +13,7 @@ def movie_list(request):
     languages = request.GET.getlist('languages')
     search_query = request.GET.get('search')
 
-    sort = request.GET.get('sort', 'release_date')
+    sort = request.GET.get('sort', 'name')
 
     movies = Movie.objects.all()
 
@@ -31,9 +31,9 @@ def movie_list(request):
     filtered_movies = movies
 
     # 🔽 SORTING
-    allowed_sorts = ['release_date', 'rating', 'title']
+    allowed_sorts = ['name', 'rating']
     if sort not in allowed_sorts:
-        sort = 'release_date'
+        sort = 'name'
 
     movies = movies.order_by(sort)
 
