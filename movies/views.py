@@ -35,12 +35,12 @@ def movie_list(request):
 
     # 📊 GENRE COUNTS (IMPORTANT)
     genre_counts = Genre.objects.annotate(
-        movie_count=Count('movie')
+        movie_count=Count('movies')
     )
 
     # 📊 LANGUAGE COUNTS
     language_counts = Language.objects.annotate(
-        movie_count=Count('movie')
+        movie_count=Count('movies')
     )
 
     return render(request, 'movies/movie_list.html', {
