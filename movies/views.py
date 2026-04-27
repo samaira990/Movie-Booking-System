@@ -104,3 +104,12 @@ def book_seats(request,theater_id):
             return render(request,'movies/seat_selection.html',{'theater':theaters,"seats":seats,'error':"No seat selected"})
         return redirect('profile')
     return render(request,'movies/seat_selection.html',{'theaters':theaters,"seats":seats})
+
+def movie_detail(request, id):
+    movie = get_object_or_404(Movie, id=id)
+    theaters = movie.theaters.all()
+
+    return render(request, 'movies/movie_detail.html', {
+        'movie': movie,
+        'theaters': theaters
+    })
