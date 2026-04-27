@@ -5,6 +5,10 @@
 
   <h1 class="text-center mb-4">🎬 Movies</h1>
 
+  <p class="text-center text-muted">
+    Total movies: {{ movies.paginator.count }}
+  </p>
+
   <!-- 🔍 FILTER + SEARCH FORM -->
   <form method="GET" action="{% url 'movie_list' %}" class="mb-5">
 
@@ -70,7 +74,7 @@
 
   <!-- 🎬 MOVIE GRID -->
   <div class="row">
-    {% for m in movie %}
+    {% for m in movies %}
     <div class="col-md-4 mb-4">
 
       <div class="card h-100 shadow-sm">
@@ -112,15 +116,15 @@
   <!-- 📄 PAGINATION -->
   <div class="mt-4 text-center">
 
-    {% if movie.has_previous %}
-    <a href="?page={{ movie.previous_page_number }}" class="btn btn-outline-primary">Previous</a>
+    {% if movies.has_previous %}
+    <a href="?page={{ movies.previous_page_number }}" class="btn btn-outline-primary">Previous</a>
     {% endif %}
 
     <span class="mx-2">
-      Page {{ movie.number }} of {{ movie.paginator.num_pages }}
+      Page {{ movies.number }} of {{ movies.paginator.num_pages }}
     </span>
 
-    {% if movie.has_next %}
+    {% if movies.has_next %}
     <a href="?page={{ movie.next_page_number }}" class="btn btn-outline-primary">Next</a>
     {% endif %}
 

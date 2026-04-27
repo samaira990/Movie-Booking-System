@@ -55,7 +55,7 @@ def movie_list(request):
     movies = paginator.get_page(page)
 
     return render(request, 'movies/movie_list.html', {
-        'movie': movies,
+        'movies': movies,
         'selected_genres': genres,
         'selected_languages': languages,
         'selected_sort': sort,
