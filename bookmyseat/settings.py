@@ -95,22 +95,30 @@ WSGI_APPLICATION = 'bookmyseat.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+DATABASE_URL = os.environ.get("DATABASE_URL")
 
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL)
     }
-}
 
-DATABASES['default']= dj_database_url.parse('postgresql://django_bookmyshow_la1u_user:age60z1zZPlxSCcXpLdo8XnhDyR9PzBM@dpg-d76k3i2a214c73amo5i0-a.ohio-postgres.render.com/django_bookmyshow_la1u')
+    DATABASES['default']['OPTIONS'] = {
+        'sslmode': 'require',
+    }
 
-# postgresql://django_bookmyshow_la1u_user:age60z1zZPlxSCcXpLdo8XnhDyR9PzBM@dpg-d76k3i2a214c73amo5i0-a.ohio-postgres.render.com/django_bookmyshow_la1u
+    CONN_MAX_AGE = 600
 
-# Password validation
-# https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
+else:
+    # LOCAL DEVELOPMENT (SQLite)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
