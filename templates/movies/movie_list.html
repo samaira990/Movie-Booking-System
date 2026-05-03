@@ -98,6 +98,11 @@
       Apply Filters
     </button>
 
+    <!-- 🔄 CLEAR FILTERS -->
+    <a href="{% url 'movie_list' %}" class="btn btn-outline-secondary w-100 mt-2">
+      Clear Filters
+    </a>
+
   </form>
 
   <!-- 🎬 MOVIE GRID -->
@@ -120,10 +125,25 @@
             </a>
           </h5>
 
-          <p>⭐ {{ m.rating }}</p>
+          <!-- ⭐ Rating -->
+          <span class="badge bg-success">⭐ {{ m.rating }}</span>
 
-          <p class="text-muted">
+          <p class="text-muted mt-2">
             Cast: {{ m.cast|truncatewords:10 }}
+          </p>
+
+          <!-- 🎭 Genres -->
+          <p>
+            {% for g in m.genres.all %}
+              <span class="badge bg-secondary">{{ g.name }}</span>
+            {% endfor %}
+          </p>
+
+          <!-- 🌐 Languages -->
+          <p>
+            {% for l in m.languages.all %}
+              <span class="badge bg-info text-dark">{{ l.name }}</span>
+            {% endfor %}
           </p>
 
         </div>
@@ -150,8 +170,10 @@
   <div class="mt-4 text-center">
 
     {% if movies.has_previous %}
-      <a href="?page={{ movies.previous_page_number }}"
-         class="btn btn-outline-primary">Previous</a>
+      <a href="?page={{ movies.previous_page_number }}&search={{ search_query }}&sort={{ selected_sort }}
+      {% for g in selected_genres %}&genres={{ g }}{% endfor %}
+      {% for l in selected_languages %}&languages={{ l }}{% endfor %}"
+      class="btn btn-outline-primary">Previous</a>
     {% endif %}
 
     <span class="mx-2">
@@ -159,8 +181,10 @@
     </span>
 
     {% if movies.has_next %}
-      <a href="?page={{ movies.next_page_number }}"
-         class="btn btn-outline-primary">Next</a>
+      <a href="?page={{ movies.next_page_number }}&search={{ search_query }}&sort={{ selected_sort }}
+      {% for g in selected_genres %}&genres={{ g }}{% endfor %}
+      {% for l in selected_languages %}&languages={{ l }}{% endfor %}"
+      class="btn btn-outline-primary">Next</a>
     {% endif %}
 
   </div>
