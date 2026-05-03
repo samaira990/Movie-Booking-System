@@ -5,8 +5,9 @@
 
   <h1 class="text-center mb-4">🎬 Movies</h1>
 
+  <!-- ✅ FIXED -->
   <p class="text-center text-muted">
-    Total movies: {{ movies.paginator.count }}
+    Total movies: {{ movies|length }}
   </p>
 
   <!-- 🔍 FILTER + SEARCH FORM -->
@@ -34,8 +35,7 @@
                    type="checkbox"
                    name="genres"
                    value="{{ g.id }}"
-                   {% if g.id|stringformat:"s" in selected_genres %}checked{% endif %}
-                   {% if g.movie_count == 0 %}disabled{% endif %}>
+                   {% if g.id|stringformat:"s" in selected_genres %}checked{% endif %}>
 
             <label class="form-check-label">
               {{ g.name }} ({{ g.movie_count }})
@@ -59,8 +59,7 @@
                    type="checkbox"
                    name="languages"
                    value="{{ l.id }}"
-                   {% if l.id|stringformat:"s" in selected_languages %}checked{% endif %}
-                   {% if l.movie_count == 0 %}disabled{% endif %}>
+                   {% if l.id|stringformat:"s" in selected_languages %}checked{% endif %}>
 
             <label class="form-check-label">
               {{ l.name }} ({{ l.movie_count }})
@@ -136,6 +135,8 @@
           <p>
             {% for g in m.genres.all %}
               <span class="badge bg-secondary">{{ g.name }}</span>
+            {% empty %}
+              <span class="text-muted">No genres</span>
             {% endfor %}
           </p>
 
@@ -143,6 +144,8 @@
           <p>
             {% for l in m.languages.all %}
               <span class="badge bg-info text-dark">{{ l.name }}</span>
+            {% empty %}
+              <span class="text-muted">No languages</span>
             {% endfor %}
           </p>
 
@@ -164,29 +167,6 @@
       <p>No movies found.</p>
     </div>
     {% endfor %}
-  </div>
-
-  <!-- 📄 PAGINATION -->
-  <div class="mt-4 text-center">
-
-    {% if movies.has_previous %}
-      <a href="?page={{ movies.previous_page_number }}&search={{ search_query }}&sort={{ selected_sort }}
-      {% for g in selected_genres %}&genres={{ g }}{% endfor %}
-      {% for l in selected_languages %}&languages={{ l }}{% endfor %}"
-      class="btn btn-outline-primary">Previous</a>
-    {% endif %}
-
-    <span class="mx-2">
-      Page {{ movies.number }} of {{ movies.paginator.num_pages }}
-    </span>
-
-    {% if movies.has_next %}
-      <a href="?page={{ movies.next_page_number }}&search={{ search_query }}&sort={{ selected_sort }}
-      {% for g in selected_genres %}&genres={{ g }}{% endfor %}
-      {% for l in selected_languages %}&languages={{ l }}{% endfor %}"
-      class="btn btn-outline-primary">Next</a>
-    {% endif %}
-
   </div>
 
 </div>

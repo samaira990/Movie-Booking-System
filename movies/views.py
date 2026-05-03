@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Movie, Theater, Seat, Booking, Genre, Language
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
-from django.db.models import Count
+from django.db.models import Count, Q
 
 
 def movie_list(request):
@@ -13,12 +13,12 @@ def movie_list(request):
     if search_query:
         movies = movies.filter(name__icontains=search_query)
 
-    # 🎭 GENRES FILTER (FIXED)
+    # 🎭 GENRES FILTER (M2M FIX)
     selected_genres = request.GET.getlist('genres')
     if selected_genres:
         movies = movies.filter(genres__id__in=selected_genres).distinct()
 
-    # 🌐 LANGUAGES FILTER (FIXED)
+    # 🌐 LANGUAGES FILTER (M2M FIX)
     selected_languages = request.GET.getlist('languages')
     if selected_languages:
         movies = movies.filter(languages__id__in=selected_languages).distinct()
@@ -30,13 +30,13 @@ def movie_list(request):
     else:
         movies = movies.order_by('name')
 
-    # 📊 COUNTS (NOW CORRECT FOR M2M)
+    # 📊 CORRECT COUNTS (FINAL FIX)
     genre_counts = Genre.objects.annotate(
-        movie_count=Count('movies', distinct=True)
+        movie_count=Count('movies', filter=Q(movies__isnull=False), distinct=True)
     )
 
     language_counts = Language.objects.annotate(
-        movie_count=Count('movies', distinct=True)
+        movie_count=Count('movies', filter=Q(movies__isnull=False), distinct=True)
     )
 
     return render(request, 'movies/movie_list.html', {
