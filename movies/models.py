@@ -19,7 +19,7 @@ class Language(models.Model):
 class Movie(models.Model):
     name= models.CharField(max_length=255)
     image= CloudinaryField('image')
-    rating = models.DecimalField(max_digits=3,decimal_places=1)
+    rating = models.DecimalField(max_digits=2, decimal_places=1)
     cast= models.TextField()
     description= models.TextField(blank=True,null=True) # optional
 
@@ -48,7 +48,7 @@ class Seat(models.Model):
         return f'{self.seat_number} in {self.theater.name}'
 
 class Booking(models.Model):
-    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
     seat=models.OneToOneField(Seat,on_delete=models.CASCADE)
     movie=models.ForeignKey(Movie,on_delete=models.CASCADE)
     theater=models.ForeignKey(Theater,on_delete=models.CASCADE)
