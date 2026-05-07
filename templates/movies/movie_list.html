@@ -5,9 +5,9 @@
 
   <h1 class="text-center mb-4">🎬 Movies</h1>
 
-  <!-- ✅ FIXED -->
+  <!-- ✅ TOTAL MOVIES COUNT -->
   <p class="text-center text-muted">
-    Total movies: {{ movies|length }}
+    Total movies: {{ movies.paginator.count }}
   </p>
 
   <!-- 🔍 FILTER + SEARCH FORM -->
@@ -15,10 +15,15 @@
 
     <!-- SEARCH -->
     <div class="input-group mb-3">
-      <input type="text" name="search" class="form-control"
+      <input type="text"
+             name="search"
+             class="form-control"
              placeholder="Search movies..."
              value="{{ search_query }}">
-      <button class="btn btn-primary">Search</button>
+
+      <button class="btn btn-primary">
+        Search
+      </button>
     </div>
 
     <div class="row">
@@ -26,6 +31,7 @@
       <!-- 🎭 GENRES -->
       <div class="col-md-4">
         <div class="card p-3 mb-3">
+
           <h5>Genres</h5>
 
           {% for g in genre_counts %}
@@ -35,7 +41,9 @@
                    type="checkbox"
                    name="genres"
                    value="{{ g.id }}"
-                   {% if g.id|stringformat:"s" in selected_genres %}checked{% endif %}>
+                   {% if g.id|stringformat:"s" in selected_genres %}
+                   checked
+                   {% endif %}>
 
             <label class="form-check-label">
               {{ g.name }} ({{ g.movie_count }})
@@ -50,6 +58,7 @@
       <!-- 🌐 LANGUAGES -->
       <div class="col-md-4">
         <div class="card p-3 mb-3">
+
           <h5>Languages</h5>
 
           {% for l in language_counts %}
@@ -59,7 +68,9 @@
                    type="checkbox"
                    name="languages"
                    value="{{ l.id }}"
-                   {% if l.id|stringformat:"s" in selected_languages %}checked{% endif %}>
+                   {% if l.id|stringformat:"s" in selected_languages %}
+                   checked
+                   {% endif %}>
 
             <label class="form-check-label">
               {{ l.name }} ({{ l.movie_count }})
@@ -74,18 +85,25 @@
       <!-- 🔽 SORT -->
       <div class="col-md-4">
         <div class="card p-3 mb-3">
+
           <h5>Sort By</h5>
 
           <select name="sort" class="form-select">
+
             <option value="name"
-              {% if selected_sort == 'name' %}selected{% endif %}>
+              {% if selected_sort == 'name' %}
+              selected
+              {% endif %}>
               Name
             </option>
 
             <option value="rating"
-              {% if selected_sort == 'rating' %}selected{% endif %}>
+              {% if selected_sort == 'rating' %}
+              selected
+              {% endif %}>
               Rating
             </option>
+
           </select>
 
         </div>
@@ -98,7 +116,8 @@
     </button>
 
     <!-- 🔄 CLEAR FILTERS -->
-    <a href="{% url 'movie_list' %}" class="btn btn-outline-secondary w-100 mt-2">
+    <a href="{% url 'movie_list' %}"
+       class="btn btn-outline-secondary w-100 mt-2">
       Clear Filters
     </a>
 
@@ -106,14 +125,22 @@
 
   <!-- 🎬 MOVIE GRID -->
   <div class="row">
+
     {% for m in movies %}
     <div class="col-md-4 mb-4">
 
       <div class="card h-100 shadow-sm">
 
+        <!-- ✅ SAFE IMAGE HANDLING -->
+        {% if m.image %}
         <img src="{{ m.image.url }}"
              class="card-img-top"
              style="height:300px; object-fit:cover;">
+        {% else %}
+        <img src="https://via.placeholder.com/300x300?text=No+Image"
+             class="card-img-top"
+             style="height:300px; object-fit:cover;">
+        {% endif %}
 
         <div class="card-body">
 
@@ -124,38 +151,52 @@
             </a>
           </h5>
 
-          <!-- ⭐ Rating -->
-          <span class="badge bg-success">⭐ {{ m.rating }}</span>
+          <!-- ⭐ RATING -->
+          <span class="badge bg-success">
+            ⭐ {{ m.rating }}
+          </span>
 
+          <!-- 🎭 CAST -->
           <p class="text-muted mt-2">
             Cast: {{ m.cast|truncatewords:10 }}
           </p>
 
-          <!-- 🎭 Genres -->
+          <!-- 🎭 GENRES -->
           <p>
             {% for g in m.genres.all %}
-              <span class="badge bg-secondary">{{ g.name }}</span>
+              <span class="badge bg-secondary">
+                {{ g.name }}
+              </span>
             {% empty %}
-              <span class="text-muted">No genres</span>
+              <span class="text-muted">
+                No genres
+              </span>
             {% endfor %}
           </p>
 
-          <!-- 🌐 Languages -->
+          <!-- 🌐 LANGUAGES -->
           <p>
             {% for l in m.languages.all %}
-              <span class="badge bg-info text-dark">{{ l.name }}</span>
+              <span class="badge bg-info text-dark">
+                {{ l.name }}
+              </span>
             {% empty %}
-              <span class="text-muted">No languages</span>
+              <span class="text-muted">
+                No languages
+              </span>
             {% endfor %}
           </p>
 
         </div>
 
+        <!-- 🎟️ BUTTON -->
         <div class="card-footer bg-white border-top-0">
+
           <a href="{% url 'theater_list' m.id %}"
              class="btn btn-outline-primary w-100">
             View Theaters
           </a>
+
         </div>
 
       </div>
@@ -167,19 +208,66 @@
       <p>No movies found.</p>
     </div>
     {% endfor %}
+
+  </div>
+
+  <!-- 🚀 PAGINATION -->
+  <div class="text-center mt-4">
+
+    {% if movies.has_previous %}
+
+      <a href="?page=1&search={{ search_query }}&sort={{ selected_sort }}"
+         class="btn btn-outline-dark btn-sm">
+        First
+      </a>
+
+      <a href="?page={{ movies.previous_page_number }}&search={{ search_query }}&sort={{ selected_sort }}"
+         class="btn btn-outline-primary btn-sm">
+        Previous
+      </a>
+
+    {% endif %}
+
+    <span class="mx-3 fw-bold">
+      Page {{ movies.number }}
+      of
+      {{ movies.paginator.num_pages }}
+    </span>
+
+    {% if movies.has_next %}
+
+      <a href="?page={{ movies.next_page_number }}&search={{ search_query }}&sort={{ selected_sort }}"
+         class="btn btn-outline-primary btn-sm">
+        Next
+      </a>
+
+      <a href="?page={{ movies.paginator.num_pages }}&search={{ search_query }}&sort={{ selected_sort }}"
+         class="btn btn-outline-dark btn-sm">
+        Last
+      </a>
+
+    {% endif %}
+
   </div>
 
 </div>
 
-<!-- 🎨 STYLE -->
+<!-- 🎨 CARD HOVER EFFECT -->
 <style>
   .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
   }
 
   .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    box-shadow: 0 4px 20px rgba(
+      0,
+      0,
+      0,
+      0.15
+    );
   }
 </style>
 

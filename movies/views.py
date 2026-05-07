@@ -3,40 +3,64 @@ from .models import Movie, Theater, Seat, Booking, Genre, Language
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 from django.db.models import Count, Q
+from django.core.paginator import Paginator
 
 
 def movie_list(request):
-    movies = Movie.objects.all()
+    movies = Movie.objects.all().prefetch_related(
+        'genres',
+        'languages'
+    )
 
     # 🔍 SEARCH
     search_query = request.GET.get('search', '')
     if search_query:
         movies = movies.filter(name__icontains=search_query)
 
-    # 🎭 GENRES FILTER (M2M FIX)
+    # 🎭 GENRES FILTER
     selected_genres = request.GET.getlist('genres')
     if selected_genres:
-        movies = movies.filter(genres__id__in=selected_genres).distinct()
+        movies = movies.filter(
+            genres__id__in=selected_genres
+        ).distinct()
 
-    # 🌐 LANGUAGES FILTER (M2M FIX)
+    # 🌐 LANGUAGES FILTER
     selected_languages = request.GET.getlist('languages')
     if selected_languages:
-        movies = movies.filter(languages__id__in=selected_languages).distinct()
+        movies = movies.filter(
+            languages__id__in=selected_languages
+        ).distinct()
 
     # 🔽 SORTING
     selected_sort = request.GET.get('sort', 'name')
+
     if selected_sort == 'rating':
         movies = movies.order_by('-rating')
     else:
         movies = movies.order_by('name')
 
-    # 📊 CORRECT COUNTS (FINAL FIX)
+    # 🚀 PAGINATION
+    paginator = Paginator(movies, 12)
+
+    page_number = request.GET.get('page')
+
+    movies = paginator.get_page(page_number)
+
+    # 📊 COUNTS
     genre_counts = Genre.objects.annotate(
-        movie_count=Count('movies', filter=Q(movies__isnull=False), distinct=True)
+        movie_count=Count(
+            'movies',
+            filter=Q(movies__isnull=False),
+            distinct=True
+        )
     )
 
     language_counts = Language.objects.annotate(
-        movie_count=Count('movies', filter=Q(movies__isnull=False), distinct=True)
+        movie_count=Count(
+            'movies',
+            filter=Q(movies__isnull=False),
+            distinct=True
+        )
     )
 
     return render(request, 'movies/movie_list.html', {
