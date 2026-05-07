@@ -3,3 +3,6 @@ gunicorn
 whitenoise
 python-dotenv
 cloudinary
+dj-database-url
+django-cloudinary-storage
+psycopg2-binary
