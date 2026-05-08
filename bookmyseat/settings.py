@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'movies',
     'cloudinary',
     'cloudinary_storage',
+    'bookings',
 ]
 
 CLOUDINARY_STORAGE = {
