@@ -14,7 +14,7 @@ def lock_seat(user, show, seat):
 
     try:
         with transaction.atomic():
-            # Check existing active lock
+
             existing_lock = (
                 SeatLock.objects
                 .select_for_update()
@@ -28,11 +28,11 @@ def lock_seat(user, show, seat):
 
             if existing_lock:
                 if existing_lock.is_expired():
+                    # remove expired lock
                     existing_lock.delete()
                 else:
                     return False, "Seat is already locked by another user"
 
-            # Create new lock
             SeatLock.objects.create(
                 user=user,
                 show=show,
