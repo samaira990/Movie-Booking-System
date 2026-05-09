@@ -7,6 +7,8 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('',include('users.urls')),
     path('movies/', include('movies.urls')),
+    path("bookings/", include("bookings.urls")),
+
 ]
 
 if settings.DEBUG:
