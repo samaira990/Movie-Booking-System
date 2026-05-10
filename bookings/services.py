@@ -4,6 +4,7 @@ from django.db import transaction, IntegrityError
 from django.utils import timezone
 
 from .models import SeatLock
+from movies.models import Booking
 
 
 def lock_seat(user, show, seat):
@@ -28,8 +29,8 @@ def lock_seat(user, show, seat):
 
             if existing_lock:
                 if existing_lock.is_expired():
-                    # remove expired lock
-                    existing_lock.delete()
+                    existing_lock.status = "expired"
+                    existing_lock.save()
                 else:
                     return False, "Seat is already locked by another user"
 
@@ -44,3 +45,18 @@ def lock_seat(user, show, seat):
 
     except IntegrityError:
         return False, "Seat already locked"
+
+
+def create_booking(user, show, seat):
+    print("DEBUG: create_booking called")  # TEMP DEBUG
+
+    booking = Booking.objects.create(
+        user=user,
+        seat=seat,
+        movie=show.movie,
+        theater=show
+    )
+
+    print("DEBUG: booking created ->", booking)
+
+    return booking

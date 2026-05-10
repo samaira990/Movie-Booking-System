@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
 
@@ -53,6 +54,7 @@ class SeatLock(models.Model):
         constraints = [
             models.UniqueConstraint(
                 fields=["show", "seat"],
-                name="unique_show_seat_lock"
+                condition=Q(status="active"),
+                name="unique_active_seat_lock"
             )
         ]
