@@ -55,6 +55,11 @@ def stripe_webhook(request):
                 provider_order_id=provider_order_id
             )
 
+            # IDEMPOTENCY CHECK
+            if payment.status == "success":
+                return HttpResponse(status=200)
+
+            # First-time success processing
             payment.status = "success"
             payment.save()
 
