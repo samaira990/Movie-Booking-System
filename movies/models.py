@@ -55,11 +55,52 @@ class Seat(models.Model):
 
 
 class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
-    seat = models.OneToOneField(Seat, on_delete=models.CASCADE)
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
-    theater = models.ForeignKey(Theater, on_delete=models.CASCADE)
-    booked_at = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='bookings'
+    )
+
+    seat = models.OneToOneField(
+        Seat,
+        on_delete=models.CASCADE
+    )
+
+    movie = models.ForeignKey(
+        Movie,
+        on_delete=models.CASCADE
+    )
+
+    theater = models.ForeignKey(
+        Theater,
+        on_delete=models.CASCADE
+    )
+
+    amount = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=250.00
+    )
+
+    status = models.CharField(
+        max_length=20,
+        choices=[
+            ("pending", "Pending"),
+            ("confirmed", "Confirmed"),
+            ("cancelled", "Cancelled"),
+        ],
+        default="pending"
+    )
+
+    booked_at = models.DateTimeField(
+        auto_now_add=True
+    )
 
     def __str__(self):
-        return f"Booking by {self.user.username} for {self.seat.seat_number} at {self.theater.name}"
+        return (
+            f"Booking by {self.user.username} "
+            f"for {self.seat.seat_number} "
+            f"at {self.theater.name}"
+        )
+    
+

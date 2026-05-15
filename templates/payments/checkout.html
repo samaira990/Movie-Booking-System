@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stripe Checkout</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+
+    <h1>Complete Payment</h1>
+    <p>Amount: ₹{{ amount }}</p>
+
+    <form id="payment-form">
+        <div id="card-element"></div>
+        <br>
+        <button id="submit">
+            Pay ₹{{ amount }}
+        </button>
+    </form>
+
+    <p id="payment-message"></p>
+
+    <script>
+        const stripe = Stripe("{{ stripe_public_key }}");
+
+        const elements = stripe.elements();
+        const card = elements.create("card");
+
+        card.mount("#card-element");
+
+        const form = document.getElementById("payment-form");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const result = await stripe.confirmCardPayment(
+                "{{ client_secret }}",
+                {
+                    payment_method: {
+                        card: card
+                    }
+                }
+            );
+
+            if (result.error) {
+                document.getElementById("payment-message").innerText =
+                    result.error.message;
+            } else {
+                document.getElementById("payment-message").innerText =
+                    "Payment successful!";
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -58,3 +58,5 @@ class SeatLock(models.Model):
                 name="unique_active_seat_lock"
             )
         ]
+
+
