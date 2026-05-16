@@ -200,3 +200,8 @@ LOGGING = {
         "level": "INFO",
     },
 }
+
+
+# Email settings
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = "noreply@bookmyshowclone.com"
