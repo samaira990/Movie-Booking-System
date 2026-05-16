@@ -3,10 +3,12 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 import stripe
+import threading
 
 from movies.models import Booking
 from .models import Payment
 from .services import create_payment_order
+from notifications.utils import send_booking_email_with_retry
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -67,6 +69,11 @@ def stripe_webhook(request):
             booking = payment.booking
             booking.status = "confirmed"
             booking.save()
+
+            threading.Thread(
+                target=send_booking_email_with_retry,
+                args=(booking, payment),
+            ).start()
 
         # FAILED CASE
         elif event_type == "payment_intent.payment_failed":
