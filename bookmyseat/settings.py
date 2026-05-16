@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'bookings',
     'payments',
+    'notifications',
 ]
 
 CLOUDINARY_STORAGE = {
