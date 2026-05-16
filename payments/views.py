@@ -45,21 +45,22 @@ def stripe_webhook(request):
     except Exception:
         return HttpResponse(status=400)
 
-    if event["type"] == "payment_intent.succeeded":
-        payment_intent = event["data"]["object"]
+    event_type = event["type"]
+    payment_intent = event["data"]["object"]
+    provider_order_id = payment_intent["id"]
 
-        provider_order_id = payment_intent["id"]
+    try:
+        payment = Payment.objects.get(
+            provider_order_id=provider_order_id
+        )
 
-        try:
-            payment = Payment.objects.get(
-                provider_order_id=provider_order_id
-            )
+        # SUCCESS CASE
+        if event_type == "payment_intent.succeeded":
 
             # IDEMPOTENCY CHECK
             if payment.status == "success":
                 return HttpResponse(status=200)
 
-            # First-time success processing
             payment.status = "success"
             payment.save()
 
@@ -67,7 +68,16 @@ def stripe_webhook(request):
             booking.status = "confirmed"
             booking.save()
 
-        except Payment.DoesNotExist:
-            pass
+        # FAILED CASE
+        elif event_type == "payment_intent.payment_failed":
+
+            if payment.status == "failed":
+                return HttpResponse(status=200)
+
+            payment.status = "failed"
+            payment.save()
+
+    except Payment.DoesNotExist:
+        pass
 
     return HttpResponse(status=200)
