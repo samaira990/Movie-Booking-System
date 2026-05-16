@@ -71,12 +71,18 @@ def stripe_webhook(request):
         # FAILED CASE
         elif event_type == "payment_intent.payment_failed":
 
+            # IDEMPOTENCY CHECK
             if payment.status == "failed":
                 return HttpResponse(status=200)
 
+            # Mark payment failed
             payment.status = "failed"
             payment.save()
 
+            # Cancel booking too
+            booking = payment.booking
+            booking.status = "cancelled"
+            booking.save()
     except Payment.DoesNotExist:
         pass
 
