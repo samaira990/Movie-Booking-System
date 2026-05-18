@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.core.exceptions import ValidationError
 
 
 class Genre(models.Model):
@@ -26,13 +27,44 @@ class Movie(models.Model):
 
     release_date = models.DateField(null=True, blank=True)
 
+    trailer_url = models.URLField(
+        null=True,
+        blank=True
+    )
+
     genres = models.ManyToManyField(Genre, related_name='movies', blank=True)
     languages = models.ManyToManyField(Language, related_name='movies', blank=True)
 
     def __str__(self):
         return self.name
+    
+    def clean(self):
+        if self.trailer_url:
+            if (
+                "youtube.com" not in self.trailer_url
+                and "youtu.be" not in self.trailer_url
+            ):
+                raise ValidationError(
+                    {
+                        "trailer_url": "Invalid trailer URL. Only YouTube URLs are allowed."
+                    }
+                )
+    @property
+    def trailer_embed_url(self):
+        if not self.trailer_url:
+            return None
 
+        if "youtu.be/" in self.trailer_url:
+            video_id = self.trailer_url.split("youtu.be/")[-1].split("?")[0]
 
+        elif "watch?v=" in self.trailer_url:
+            video_id = self.trailer_url.split("watch?v=")[-1].split("&")[0]
+
+        else:
+            return None
+
+        return f"https://www.youtube.com/embed/{video_id}"
+    
 class Theater(models.Model):
     name = models.CharField(max_length=255)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='theaters')
