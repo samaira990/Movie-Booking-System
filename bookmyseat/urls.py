@@ -9,6 +9,7 @@ urlpatterns = [
     path('movies/', include('movies.urls')),
     path("bookings/", include("bookings.urls")),
     path("payments/", include("payments.urls")),
+    path("analytics/", include("analytics.urls")),
 
 ]
 
