@@ -135,9 +135,8 @@ def book_seats(request, theater_id):
         "seats": seats
     })
 
-
-def movie_detail(request, id):
-    movie = get_object_or_404(Movie, id=id)
+def movie_detail(request, movie_id):
+    movie = get_object_or_404(Movie, id=movie_id)
     theaters = movie.theaters.all()
 
     return render(request, 'movies/movie_detail.html', {

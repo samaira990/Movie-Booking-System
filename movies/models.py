@@ -63,8 +63,8 @@ class Movie(models.Model):
         else:
             return None
 
-        return f"https://www.youtube.com/embed/{video_id}"
-    
+        return f"https://www.youtube.com/embed/{video_id}?rel=0"   
+ 
 class Theater(models.Model):
     name = models.CharField(max_length=255)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='theaters')

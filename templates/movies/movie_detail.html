@@ -62,10 +62,28 @@
           {{ movie.description }}
         </p>
 
-      </div>
+        <!-- 🎬 TRAILER -->
+        {% if movie.trailer_embed_url %}
+          <h3 class="mt-4">🎬 Watch Trailer</h3>
 
-    </div>
+          <p>DEBUG: {{ movie.trailer_embed_url }}</p>
 
+          <div class="ratio ratio-16x9 my-3">
+            <iframe
+                width="100%"
+                height="450"
+                src="{{ movie.trailer_embed_url }}"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+          </div>
+
+        {% else %}
+          <p class="text-muted mt-3">Trailer not available</p>
+        {% endif %}
+
+        </div>
+        </div>
     <!-- 🎟️ THEATERS -->
     <div class="mt-5">
 
