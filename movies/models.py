@@ -100,12 +100,14 @@ class Booking(models.Model):
 
     movie = models.ForeignKey(
         Movie,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        db_index=True
     )
 
     theater = models.ForeignKey(
         Theater,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        db_index=True
     )
 
     amount = models.DecimalField(
@@ -116,6 +118,7 @@ class Booking(models.Model):
 
     status = models.CharField(
         max_length=20,
+        db_index=True,
         choices=[
             ("pending", "Pending"),
             ("confirmed", "Confirmed"),
@@ -125,7 +128,8 @@ class Booking(models.Model):
     )
 
     booked_at = models.DateTimeField(
-        auto_now_add=True
+        auto_now_add=True,
+        db_index=True
     )
 
     def __str__(self):

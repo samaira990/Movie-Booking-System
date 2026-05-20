@@ -95,8 +95,11 @@ def get_cancellation_rate():
 
 def get_busiest_theaters():
     """
-    Theaters with most confirmed bookings.
-    Approximation of occupancy.
+    Approximation of theater occupancy.
+
+    Since theater total capacity is not stored,
+    busiest theaters are calculated using
+    confirmed booking counts per theater.
     """
 
     return (
