@@ -15,7 +15,9 @@ def movie_list(request):
     # 🔍 SEARCH
     search_query = request.GET.get('search', '')
     if search_query:
-        movies = movies.filter(name__icontains=search_query)
+        movies = movies.filter(
+            name__icontains=search_query
+        )
 
     # 🎭 GENRES FILTER
     selected_genres = request.GET.getlist('genres')
@@ -32,25 +34,41 @@ def movie_list(request):
         ).distinct()
 
     # 🔽 SORTING
-    selected_sort = request.GET.get('sort', 'name')
+    selected_sort = request.GET.get(
+        'sort',
+        'name'
+    )
 
     if selected_sort == 'rating':
-        movies = movies.order_by('-rating')
+        movies = movies.order_by(
+            '-rating'
+        )
     else:
-        movies = movies.order_by('name')
+        movies = movies.order_by(
+            'name'
+        )
 
     # 🚀 PAGINATION
-    paginator = Paginator(movies, 12)
+    paginator = Paginator(
+        movies,
+        12
+    )
 
-    page_number = request.GET.get('page')
+    page_number = request.GET.get(
+        'page'
+    )
 
-    movies = paginator.get_page(page_number)
+    movies = paginator.get_page(
+        page_number
+    )
 
     # 📊 COUNTS
     genre_counts = Genre.objects.annotate(
         movie_count=Count(
             'movies',
-            filter=Q(movies__isnull=False),
+            filter=Q(
+                movies__isnull=False
+            ),
             distinct=True
         )
     )
@@ -58,21 +76,34 @@ def movie_list(request):
     language_counts = Language.objects.annotate(
         movie_count=Count(
             'movies',
-            filter=Q(movies__isnull=False),
+            filter=Q(
+                movies__isnull=False
+            ),
             distinct=True
         )
     )
 
-    return render(request, 'movies/movie_list.html', {
-        'movies': movies,
-        'genre_counts': genre_counts,
-        'language_counts': language_counts,
-        'selected_genres': selected_genres,
-        'selected_languages': selected_languages,
-        'selected_sort': selected_sort,
-        'search_query': search_query,
-    })
+    # Preserve filters in pagination
+    query_params = request.GET.copy()
+    query_params.pop(
+        'page',
+        None
+    )
 
+    return render(
+        request,
+        'movies/movie_list.html',
+        {
+            'movies': movies,
+            'genre_counts': genre_counts,
+            'language_counts': language_counts,
+            'selected_genres': selected_genres,
+            'selected_languages': selected_languages,
+            'selected_sort': selected_sort,
+            'search_query': search_query,
+            'query_params': query_params.urlencode(),
+        }
+    )
 
 def theater_list(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)

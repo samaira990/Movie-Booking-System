@@ -1,0 +1,2819 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-05-02T11:52:26.566Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Action",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-05-02T11:53:01.639Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Thril",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-05-02T11:53:33.801Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Thril",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-05-02T11:54:03.611Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Thriller",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-05-02T11:54:18.894Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Comedy",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-05-02T11:54:32.067Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Drama",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-05-02T11:56:08.263Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Telugu",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-05-02T11:56:31.880Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "English",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-05-02T11:56:45.355Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Hindi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-05-02T11:59:44.366Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Avengers: Endgame",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-05-03T13:23:46.227Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Romance",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-05-03T13:24:08.520Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Horror",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-05-03T13:24:33.589Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Adventure",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-05-03T13:24:54.270Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Sci-Fi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-05-03T13:25:09.520Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Fantacy",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-05-03T13:26:13.603Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Mystery",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-05-03T13:27:28.439Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Crime",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-05-03T13:27:51.351Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Animation",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-05-03T13:28:19.381Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Family",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-05-03T13:28:33.175Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "Biography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-05-03T13:28:50.527Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "History",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-05-03T13:29:12.113Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "17",
+    "object_repr": "Sport",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-05-03T13:29:40.670Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "War",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-05-03T13:30:03.713Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "19",
+    "object_repr": "Superhero",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-05-03T13:30:21.713Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "20",
+    "object_repr": "Political",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-05-03T13:30:48.348Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "Documentary",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-05-03T13:31:03.265Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "22",
+    "object_repr": "Psychological",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-05-03T13:31:19.791Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "23",
+    "object_repr": "Supernatural",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-05-03T13:31:44.551Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "24",
+    "object_repr": "Mythological",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-05-03T13:32:03.998Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "25",
+    "object_repr": "Devotional",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-05-03T13:32:15.058Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "26",
+    "object_repr": "Masala",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-05-03T13:32:26.057Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "27",
+    "object_repr": "Social Issue",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-05-03T13:32:35.619Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "28",
+    "object_repr": "Patriotic",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-05-03T13:32:44.620Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "29",
+    "object_repr": "Regional Drama",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-05-03T13:34:14.155Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "30",
+    "object_repr": "Comedy + Thriller",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-05-03T13:35:44.196Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "30",
+    "object_repr": "Comedy + Thriller",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-05-03T13:35:44.212Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Crime",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-05-08T06:04:36.401Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "725",
+    "object_repr": "Avengers: Endgame",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-05-08T06:06:43.045Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "726",
+    "object_repr": "Black Panther: Wakanda Forever (",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-05-08T06:08:03.766Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "727",
+    "object_repr": "About Time",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-05-08T06:10:00.058Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "728",
+    "object_repr": "Shaitaan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-05-08T06:11:20.756Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "729",
+    "object_repr": "Tiger 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-05-08T06:13:03.467Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "730",
+    "object_repr": "Lagaan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-05-08T06:16:04.346Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "731",
+    "object_repr": "Pathaan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-05-08T06:17:36.894Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "732",
+    "object_repr": "Baahubali: The Beginning (2015)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-05-09T10:48:53.232Z",
+    "user": 2,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Theater 1 - Avengers: Endgame at 2026-05-11 10:48:48+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-05-09T10:49:27.884Z",
+    "user": 2,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Theater 2 - Baahubali: The Beginning (2015) at 2026-05-11 10:49:12+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-05-09T10:50:09.105Z",
+    "user": 2,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Theater 3 - Black Panther: Wakanda Forever ( at 2026-05-12 10:49:54+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-05-09T10:50:37.165Z",
+    "user": 2,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "Theater 4 - Pathaan at 2026-05-12 10:50:34+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-05-09T10:51:32.888Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "7 in Theater 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-05-09T10:51:51.033Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "1 in Theater 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-05-09T10:52:11.749Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "2 in Theater 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-05-09T10:52:20.734Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "3 in Theater 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-05-09T10:52:53.578Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "6 in Theater 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-05-09T10:53:03.310Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "5 in Theater 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-05-14T21:23:19.696Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Booking by samaira for 5 at Theater 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-05-16T00:37:23.491Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Booking by Samaira for 3 at Theater 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-05-16T17:54:48.136Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Booking by samaira for 6 at Theater 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-05-16T18:04:41.373Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "12 in Theater 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-05-16T18:07:41.801Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Booking by Samaira for 12 at Theater 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-05-18T08:52:36.268Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "725",
+    "object_repr": "Avengers: Endgame",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Trailer url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-05-18T14:36:38.565Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "725",
+    "object_repr": "Avengers: Endgame",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Trailer url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-05-20T05:57:40.566Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "725",
+    "object_repr": "Avengers: Endgame",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Trailer url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-05-20T05:57:51.198Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "725",
+    "object_repr": "Avengers: Endgame",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-05-20T06:01:29.792Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "725",
+    "object_repr": "Avengers: Endgame",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Trailer url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-05-20T06:09:08.644Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "725",
+    "object_repr": "Avengers: Endgame",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Trailer url\"]}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$b45WE5aM14oZIkLxpA5EDq$+NA7YYCJvDCbmuqw7q6z1+m6IKS4bEQMCC11M1IUNd8=",
+    "last_login": "2026-05-08T11:18:11.427Z",
+    "is_superuser": true,
+    "username": "samaira",
+    "first_name": "",
+    "last_name": "",
+    "email": "samaira67@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-02T08:12:36.798Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$6sNeWHz31V62vMDhTTo2nA$PuHogSblCssXRO4p6F0u59lt86/r8A//fAWCUD320yw=",
+    "last_login": "2026-05-21T18:45:00.102Z",
+    "is_superuser": true,
+    "username": "Samaira",
+    "first_name": "",
+    "last_name": "",
+    "email": "samairabhatti67@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-08T09:42:56.742Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0zoxzdyrouyi14n69tyxghtcd8jqc8ga",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hDqQAGX7nsGMgOMVA0kpV0Z765NutDtf-_9lwi4rSVsPS9hTuIiBnH63QjjI9cdpDvWW5Ox1XWZSe6KPGiXU0v5eT3cv4OCvXzr0bNBmyJZogSkz8qg0mbMhhgGANYEjlgr9tYhRARrWSmXfVYM3oj3B_QFOAU:1wJ5TR:OqWr9cDxeEVJF2sQxSVpj3UD8eCj742-6F2uYvju1ww",
+    "expire_date": "2026-05-16T08:13:17.507Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7u0r3bx1knc7znwgaufqnwct2mmlacan",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hA6TmVw6d4zEGYAqRpISrsy3l2bdKHb_977L-XDuhS_9jT7KaqzAnX43TjII9UNxHuot6al1WWeWG-K3mnX1xbT87K7fwcl9PKtESSbQQgRzIkJiTEQEYAL6GRI4DI6ihGOPDqxdmRBsAazE2IwSb0_wEI3JA:1wMNUU:GcaXttUWx31ec4c2DO1c3i7ovAi0Kxn9tuPRtwljCC4",
+    "expire_date": "2026-05-25T10:03:58.139Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "962nk8s3euv6wcsl8alb2u69fff5tz9t",
+  "fields": {
+    "session_data": ".eJxVjL0OwjAQg98lM4quIX8wsvcZomsuRwookZp2Qrw7qdQBNtuf7bcIuK05bC0tYSZxFYM4_WYTxmcqO6AHlnuVsZZ1mSe5V-RBmxwrpdft6P4dZGy5r4E0A7sIWtlBJbKguvQcGSFalzwbS74bbwwwnj2TRu3YJafURbP4fAHdmzfY:1wKwQT:8RhGo-LDtRJQy1xOWcW51clarr9khF9AJg46Knvvhn4",
+    "expire_date": "2026-05-21T10:57:53.591Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bngyxtnd6zlj82tj8yee52bq7dcjma7r",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hA6TmVw6d4zEGYAqRpISrsy3l2bdKHb_977L-XDuhS_9jT7KaqzAnX43TjII9UNxHuot6al1WWeWG-K3mnX1xbT87K7fwcl9PKtESSbQQgRzIkJiTEQEYAL6GRI4DI6ihGOPDqxdmRBsAazE2IwSb0_wEI3JA:1wLI8s:IrTzpNptDTYzqM-dTr5IDh8Ozl7fwXf5HsqhhOpPr7M",
+    "expire_date": "2026-05-22T10:09:10.146Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cgk1candni6vucm6dg2avltvznkpazqp",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hA6TmVw6d4zEGYAqRpISrsy3l2bdKHb_977L-XDuhS_9jT7KaqzAnX43TjII9UNxHuot6al1WWeWG-K3mnX1xbT87K7fwcl9PKtESSbQQgRzIkJiTEQEYAL6GRI4DI6ihGOPDqxdmRBsAazE2IwSb0_wEI3JA:1wLfBF:6VfcJ6M7sCewnT_5XqUcVB7dwysT2v4cUXNwMW5D-9Q",
+    "expire_date": "2026-05-23T10:45:09.168Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gcfhqwbnecem1wbkk5xow2g99tdwmigf",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hA6TmVw6d4zEGYAqRpISrsy3l2bdKHb_977L-XDuhS_9jT7KaqzAnX43TjII9UNxHuot6al1WWeWG-K3mnX1xbT87K7fwcl9PKtESSbQQgRzIkJiTEQEYAL6GRI4DI6ihGOPDqxdmRBsAazE2IwSb0_wEI3JA:1wNcvg:ahleN3mB8WqRzKwN85qxp84uNc0fZtHdJXEKKCEudBQ",
+    "expire_date": "2026-05-28T20:45:12.281Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i1gwsq3yma7fva4bvdhgzcoso0jihbh1",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hA6TmVw6d4zEGYAqRpISrsy3l2bdKHb_977L-XDuhS_9jT7KaqzAnX43TjII9UNxHuot6al1WWeWG-K3mnX1xbT87K7fwcl9PKtESSbQQgRzIkJiTEQEYAL6GRI4DI6ihGOPDqxdmRBsAazE2IwSb0_wEI3JA:1wLyLv:E-rSWxMcCo0yNc9RRwXSuw9JBxYR6Ou-FA0-P_Ojra4",
+    "expire_date": "2026-05-24T07:13:27.427Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j4coymgyklpb0ob04zp688zkn4bqonsk",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hDqQAGX7nsGMgOMVA0kpV0Z765NutDtf-_9lwi4rSVsPS9hTuIiBnH63QjjI9cdpDvWW5Ox1XWZSe6KPGiXU0v5eT3cv4OCvXzr0bNBmyJZogSkz8qg0mbMhhgGANYEjlgr9tYhRARrWSmXfVYM3oj3B_QFOAU:1wJXsJ:yLt1-sIv-Q62QAX_IgMsFowkZNEF_Y6kjIyGLk_-sHw",
+    "expire_date": "2026-05-17T14:32:51.790Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lazye8od90x9neomzq11pwo5y0nbcakd",
+  "fields": {
+    "session_data": ".eJxVjL0OwjAQg98lM4quIX8wsvcZomsuRwookZp2Qrw7qdQBNtuf7bcIuK05bC0tYSZxFYM4_WYTxmcqO6AHlnuVsZZ1mSe5V-RBmxwrpdft6P4dZGy5r4E0A7sIWtlBJbKguvQcGSFalzwbS74bbwwwnj2TRu3YJafURbP4fAHdmzfY:1wLJDf:ylYRJgVBq0LCPE9zg0mSs7W-lbcjbSenyLP1ck1Xpig",
+    "expire_date": "2026-05-22T11:18:11.796Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nliy24aljk6w78qeck07219ggrw4nvrz",
+  "fields": {
+    "session_data": ".eJxVjL0OwjAQg98lM4quIX8wsvcZomsuRwookZp2Qrw7qdQBNtuf7bcIuK05bC0tYSZxFYM4_WYTxmcqO6AHlnuVsZZ1mSe5V-RBmxwrpdft6P4dZGy5r4E0A7sIWtlBJbKguvQcGSFalzwbS74bbwwwnj2TRu3YJafURbP4fAHdmzfY:1wKwep:WZDW69N8xR3kAu8HTcADlkqHx827JyFzGr-t5Q2eUR8",
+    "expire_date": "2026-05-21T11:12:43.847Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "o8ijkxbtw23olp89qim7zsd0bjrhyzvi",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hDqQAGX7nsGMgOMVA0kpV0Z765NutDtf-_9lwi4rSVsPS9hTuIiBnH63QjjI9cdpDvWW5Ox1XWZSe6KPGiXU0v5eT3cv4OCvXzr0bNBmyJZogSkz8qg0mbMhhgGANYEjlgr9tYhRARrWSmXfVYM3oj3B_QFOAU:1wKXT2:AkRy5q03hX5sBLvVEUwWRyiLvzveacIW_QPDvNJBp_M",
+    "expire_date": "2026-05-20T08:18:52.864Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pzele4zz50atng5id282mkami3nk36xu",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hA6TmVw6d4zEGYAqRpISrsy3l2bdKHb_977L-XDuhS_9jT7KaqzAnX43TjII9UNxHuot6al1WWeWG-K3mnX1xbT87K7fwcl9PKtESSbQQgRzIkJiTEQEYAL6GRI4DI6ihGOPDqxdmRBsAazE2IwSb0_wEI3JA:1wNdU0:ThDiYsw9-KRjVVNIe4X9_uWtUZHQqfLrXUY1hKzoWGE",
+    "expire_date": "2026-05-28T21:20:40.166Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qseee73yes4tg02vlji4g7wpz13yveqb",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hDqQAGX7nsGMgOMVA0kpV0Z765NutDtf-_9lwi4rSVsPS9hTuIiBnH63QjjI9cdpDvWW5Ox1XWZSe6KPGiXU0v5eT3cv4OCvXzr0bNBmyJZogSkz8qg0mbMhhgGANYEjlgr9tYhRARrWSmXfVYM3oj3B_QFOAU:1wJY0l:mQ3h8u_yAcx2cSgcaJ0s6goUjKUSpOIPXfxw7bvi1LI",
+    "expire_date": "2026-05-17T14:41:35.655Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "s3n7a3tih7gywyfnodz2bc6hpr4lpxsz",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hA6TmVw6d4zEGYAqRpISrsy3l2bdKHb_977L-XDuhS_9jT7KaqzAnX43TjII9UNxHuot6al1WWeWG-K3mnX1xbT87K7fwcl9PKtESSbQQgRzIkJiTEQEYAL6GRI4DI6ihGOPDqxdmRBsAazE2IwSb0_wEI3JA:1wQ8OC:Dj-MrKAGiSt-haYZHlv8jmh2dd65KvN5wMfYOE248Vc",
+    "expire_date": "2026-06-04T18:45:00.410Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sck5vyubzt3n72bgdajjx5ulyv7ytjzc",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hDqQAGX7nsGMgOMVA0kpV0Z765NutDtf-_9lwi4rSVsPS9hTuIiBnH63QjjI9cdpDvWW5Ox1XWZSe6KPGiXU0v5eT3cv4OCvXzr0bNBmyJZogSkz8qg0mbMhhgGANYEjlgr9tYhRARrWSmXfVYM3oj3B_QFOAU:1wJhCc:bjOTRJXnJcRfgU6_hFQUJWG5G6QWeE5SAU8SIbBu_as",
+    "expire_date": "2026-05-18T00:30:26.132Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "szi52nbo73aouf3g96uk60dhsqwfzwnw",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hDqQAGX7nsGMgOMVA0kpV0Z765NutDtf-_9lwi4rSVsPS9hTuIiBnH63QjjI9cdpDvWW5Ox1XWZSe6KPGiXU0v5eT3cv4OCvXzr0bNBmyJZogSkz8qg0mbMhhgGANYEjlgr9tYhRARrWSmXfVYM3oj3B_QFOAU:1wJXbf:FjztJMGmZGcAPjYjzDx1nMWFAYit7CPkzFh-bPuT3jc",
+    "expire_date": "2026-05-17T14:15:39.429Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tma9l594x64nqqienmg8906pewvlfgci",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hA6TmVw6d4zEGYAqRpISrsy3l2bdKHb_977L-XDuhS_9jT7KaqzAnX43TjII9UNxHuot6al1WWeWG-K3mnX1xbT87K7fwcl9PKtESSbQQgRzIkJiTEQEYAL6GRI4DI6ihGOPDqxdmRBsAazE2IwSb0_wEI3JA:1wLnLE:LSpJdfJLW_k8VC_eF0Vpxb9I6H7uq6cMmASMZP85DMo",
+    "expire_date": "2026-05-23T19:28:00.867Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vc16w8i6wt15ezoo716jtchtnpspr8nm",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hDqQAGX7nsGMgOMVA0kpV0Z765NutDtf-_9lwi4rSVsPS9hTuIiBnH63QjjI9cdpDvWW5Ox1XWZSe6KPGiXU0v5eT3cv4OCvXzr0bNBmyJZogSkz8qg0mbMhhgGANYEjlgr9tYhRARrWSmXfVYM3oj3B_QFOAU:1wJh0i:80hV4cQK9HvszuBY8PuPPbg_hf7iKwptQgwp-j0cFOk",
+    "expire_date": "2026-05-18T00:18:08.070Z"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Action"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Thriller"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Comedy"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Drama"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Romance"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Horror"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Adventure"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 9,
+  "fields": {
+    "name": "Sci-Fi"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 10,
+  "fields": {
+    "name": "Fantacy"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 11,
+  "fields": {
+    "name": "Mystery"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 13,
+  "fields": {
+    "name": "Animation"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 14,
+  "fields": {
+    "name": "Family"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 15,
+  "fields": {
+    "name": "Biography"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 16,
+  "fields": {
+    "name": "History"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 17,
+  "fields": {
+    "name": "Sport"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 18,
+  "fields": {
+    "name": "War"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 19,
+  "fields": {
+    "name": "Superhero"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 20,
+  "fields": {
+    "name": "Political"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 21,
+  "fields": {
+    "name": "Documentary"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 22,
+  "fields": {
+    "name": "Psychological"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 23,
+  "fields": {
+    "name": "Supernatural"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 24,
+  "fields": {
+    "name": "Mythological"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 25,
+  "fields": {
+    "name": "Devotional"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 26,
+  "fields": {
+    "name": "Masala"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 27,
+  "fields": {
+    "name": "Social Issue"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 28,
+  "fields": {
+    "name": "Patriotic"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 29,
+  "fields": {
+    "name": "Regional Drama"
+  }
+},
+{
+  "model": "movies.language",
+  "pk": 1,
+  "fields": {
+    "name": "Telugu"
+  }
+},
+{
+  "model": "movies.language",
+  "pk": 2,
+  "fields": {
+    "name": "English"
+  }
+},
+{
+  "model": "movies.language",
+  "pk": 3,
+  "fields": {
+    "name": "Hindi"
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 675,
+  "fields": {
+    "name": "Movie 1",
+    "image": null,
+    "rating": "7.4",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 1",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      16,
+      10
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 676,
+  "fields": {
+    "name": "Movie 2",
+    "image": null,
+    "rating": "8.3",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 2",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      25,
+      3
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 677,
+  "fields": {
+    "name": "Movie 3",
+    "image": null,
+    "rating": "7.7",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 3",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      11,
+      15
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 678,
+  "fields": {
+    "name": "Movie 4",
+    "image": null,
+    "rating": "8.3",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 4",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      9,
+      11
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 679,
+  "fields": {
+    "name": "Movie 5",
+    "image": null,
+    "rating": "5.7",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 5",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      5,
+      15
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 680,
+  "fields": {
+    "name": "Movie 6",
+    "image": null,
+    "rating": "5.9",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 6",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      13,
+      14
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 681,
+  "fields": {
+    "name": "Movie 7",
+    "image": null,
+    "rating": "6.9",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 7",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      11,
+      13
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 682,
+  "fields": {
+    "name": "Movie 8",
+    "image": null,
+    "rating": "8.7",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 8",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      11,
+      4
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 683,
+  "fields": {
+    "name": "Movie 9",
+    "image": null,
+    "rating": "5.1",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 9",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      18,
+      7
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 684,
+  "fields": {
+    "name": "Movie 10",
+    "image": null,
+    "rating": "5.9",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 10",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      11,
+      22
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 685,
+  "fields": {
+    "name": "Movie 11",
+    "image": null,
+    "rating": "5.2",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 11",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      1,
+      10
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 686,
+  "fields": {
+    "name": "Movie 12",
+    "image": null,
+    "rating": "8.8",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 12",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      26,
+      19
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 687,
+  "fields": {
+    "name": "Movie 13",
+    "image": null,
+    "rating": "5.4",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 13",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      26,
+      19
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 688,
+  "fields": {
+    "name": "Movie 14",
+    "image": null,
+    "rating": "6.4",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 14",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      25,
+      15
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 689,
+  "fields": {
+    "name": "Movie 15",
+    "image": null,
+    "rating": "7.6",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 15",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      25,
+      28
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 690,
+  "fields": {
+    "name": "Movie 16",
+    "image": null,
+    "rating": "5.4",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 16",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      17,
+      11
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 691,
+  "fields": {
+    "name": "Movie 17",
+    "image": null,
+    "rating": "6.6",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 17",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      5,
+      6
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 692,
+  "fields": {
+    "name": "Movie 18",
+    "image": null,
+    "rating": "5.6",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 18",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      19,
+      20
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 693,
+  "fields": {
+    "name": "Movie 19",
+    "image": null,
+    "rating": "5.7",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 19",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      24,
+      6
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 694,
+  "fields": {
+    "name": "Movie 20",
+    "image": null,
+    "rating": "9.0",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 20",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      3,
+      23
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 695,
+  "fields": {
+    "name": "Movie 21",
+    "image": null,
+    "rating": "9.4",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 21",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      27,
+      19
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 696,
+  "fields": {
+    "name": "Movie 22",
+    "image": null,
+    "rating": "6.4",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 22",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      1,
+      4
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 697,
+  "fields": {
+    "name": "Movie 23",
+    "image": null,
+    "rating": "6.9",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 23",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      11,
+      28
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 698,
+  "fields": {
+    "name": "Movie 24",
+    "image": null,
+    "rating": "8.6",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 24",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      3,
+      29
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 699,
+  "fields": {
+    "name": "Movie 25",
+    "image": null,
+    "rating": "7.1",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 25",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      1,
+      26
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 700,
+  "fields": {
+    "name": "Movie 26",
+    "image": null,
+    "rating": "6.2",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 26",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      11,
+      15
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 701,
+  "fields": {
+    "name": "Movie 27",
+    "image": null,
+    "rating": "6.7",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 27",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      14,
+      23
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 702,
+  "fields": {
+    "name": "Movie 28",
+    "image": null,
+    "rating": "5.4",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 28",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      22,
+      15
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 703,
+  "fields": {
+    "name": "Movie 29",
+    "image": null,
+    "rating": "6.7",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 29",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      9,
+      20
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 704,
+  "fields": {
+    "name": "Movie 30",
+    "image": null,
+    "rating": "8.5",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 30",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      18,
+      6
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 705,
+  "fields": {
+    "name": "Movie 31",
+    "image": null,
+    "rating": "5.8",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 31",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      11,
+      6
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 706,
+  "fields": {
+    "name": "Movie 32",
+    "image": null,
+    "rating": "8.0",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 32",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      3,
+      13
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 707,
+  "fields": {
+    "name": "Movie 33",
+    "image": null,
+    "rating": "9.5",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 33",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      6,
+      22
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 708,
+  "fields": {
+    "name": "Movie 34",
+    "image": null,
+    "rating": "9.1",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 34",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      15,
+      23
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 709,
+  "fields": {
+    "name": "Movie 35",
+    "image": null,
+    "rating": "9.4",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 35",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      26,
+      3
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 710,
+  "fields": {
+    "name": "Movie 36",
+    "image": null,
+    "rating": "7.4",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 36",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      1,
+      11
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 711,
+  "fields": {
+    "name": "Movie 37",
+    "image": null,
+    "rating": "6.0",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 37",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      1,
+      13
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 712,
+  "fields": {
+    "name": "Movie 38",
+    "image": null,
+    "rating": "7.9",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 38",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      11,
+      4
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 713,
+  "fields": {
+    "name": "Movie 39",
+    "image": null,
+    "rating": "7.7",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 39",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      29,
+      14
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 714,
+  "fields": {
+    "name": "Movie 40",
+    "image": null,
+    "rating": "9.3",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 40",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      26,
+      29
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 715,
+  "fields": {
+    "name": "Movie 41",
+    "image": null,
+    "rating": "5.2",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 41",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      26,
+      11
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 716,
+  "fields": {
+    "name": "Movie 42",
+    "image": null,
+    "rating": "8.3",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 42",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      19,
+      21
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 717,
+  "fields": {
+    "name": "Movie 43",
+    "image": null,
+    "rating": "6.5",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 43",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      10,
+      21
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 718,
+  "fields": {
+    "name": "Movie 44",
+    "image": null,
+    "rating": "8.6",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 44",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      27,
+      22
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 719,
+  "fields": {
+    "name": "Movie 45",
+    "image": null,
+    "rating": "6.7",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 45",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      5,
+      14
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 720,
+  "fields": {
+    "name": "Movie 46",
+    "image": null,
+    "rating": "8.8",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 46",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      5,
+      14
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 721,
+  "fields": {
+    "name": "Movie 47",
+    "image": null,
+    "rating": "6.3",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 47",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      1,
+      15
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 722,
+  "fields": {
+    "name": "Movie 48",
+    "image": null,
+    "rating": "9.3",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 48",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      1,
+      21
+    ],
+    "languages": [
+      1
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 723,
+  "fields": {
+    "name": "Movie 49",
+    "image": null,
+    "rating": "8.0",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 49",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      16,
+      22
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 724,
+  "fields": {
+    "name": "Movie 50",
+    "image": null,
+    "rating": "8.9",
+    "cast": "Actor A, Actor B",
+    "description": "This is movie number 50",
+    "release_date": "2020-01-01",
+    "trailer_url": null,
+    "genres": [
+      14,
+      6
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 725,
+  "fields": {
+    "name": "Avengers: Endgame",
+    "image": "image/upload/v1778220275/hg6yzubrorm92qxpjpky.jpg",
+    "rating": "8.4",
+    "cast": "Avengers: Endgame (2019)\r\nRating: 8.4/10\r\nCast: Robert Downey Jr., Chris Evans, Chris Hemsworth\r\nDescription: Avengers try to reverse ThanosÆ destruction and save the universe.\r\nRelease Date: 26 April 2019",
+    "description": "Avengers try to reverse ThanosÆ destruction and save the universe.",
+    "release_date": "2019-04-26",
+    "trailer_url": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+    "genres": [
+      1
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 726,
+  "fields": {
+    "name": "Black Panther: Wakanda Forever (",
+    "image": "image/upload/v1778220402/d3ye8sqj97arq9iuqu9t.jpg",
+    "rating": "8.0",
+    "cast": "Cast: Letitia Wright, Lupita NyongÆo",
+    "description": "Description: Wakanda fights to protect its future after losing its king.",
+    "release_date": "2022-11-11",
+    "trailer_url": null,
+    "genres": [
+      1
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 727,
+  "fields": {
+    "name": "About Time",
+    "image": "image/upload/v1778220483/dkrqm6yfn1k5gtfgk5bc.jpg",
+    "rating": "7.8",
+    "cast": "Cast: Domhnall Gleeson, Rachel McAdams",
+    "description": "Description: A man uses time travel to improve his love life.",
+    "release_date": "2013-09-02",
+    "trailer_url": null,
+    "genres": [
+      5
+    ],
+    "languages": [
+      2
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 728,
+  "fields": {
+    "name": "Shaitaan",
+    "image": "image/upload/v1778220599/bfklfzwi46axepsqsxdr.jpg",
+    "rating": "6.6",
+    "cast": "Cast: Ajay Devgn, R. Madhavan",
+    "description": "Description: A family faces a dangerous supernatural force.",
+    "release_date": "2024-03-08",
+    "trailer_url": null,
+    "genres": [
+      3
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 729,
+  "fields": {
+    "name": "Tiger 3",
+    "image": "image/upload/v1778220680/imflnwz5s7zuho7butdq.jpg",
+    "rating": "5.7",
+    "cast": "Cast: Salman Khan, Katrina Kaif",
+    "description": "Description: A spy fights enemies to protect his country.",
+    "release_date": "2023-10-20",
+    "trailer_url": null,
+    "genres": [
+      5
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 730,
+  "fields": {
+    "name": "Lagaan",
+    "image": "image/upload/v1778220782/y3yjwggq4g9adx0xdorb.jpg",
+    "rating": "8.1",
+    "cast": "Cast: Aamir Khan",
+    "description": "Description: Villagers challenge British officers in a cricket match to avoid tax.",
+    "release_date": "2001-06-01",
+    "trailer_url": null,
+    "genres": [
+      5
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 731,
+  "fields": {
+    "name": "Pathaan",
+    "image": "image/upload/v1778220963/c8rgf7xo6uijotd9lry9.jpg",
+    "rating": "5.7",
+    "cast": "Cast: Shah Rukh Khan, Deepika Padukone",
+    "description": "Description: A spy stops a major terrorist attack.",
+    "release_date": "2023-01-25",
+    "trailer_url": null,
+    "genres": [
+      3
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 732,
+  "fields": {
+    "name": "Baahubali: The Beginning (2015)",
+    "image": "image/upload/v1778221056/zvnbtngr4j3sonvybsex.jpg",
+    "rating": "8.0",
+    "cast": "Cast: Prabhas",
+    "description": "Description: A man discovers his royal heritage and destiny.",
+    "release_date": "2015-07-10",
+    "trailer_url": null,
+    "genres": [
+      3
+    ],
+    "languages": [
+      3
+    ]
+  }
+},
+{
+  "model": "movies.theater",
+  "pk": 1,
+  "fields": {
+    "name": "Theater 1",
+    "movie": 725,
+    "time": "2026-05-11T10:48:48Z"
+  }
+},
+{
+  "model": "movies.theater",
+  "pk": 2,
+  "fields": {
+    "name": "Theater 2",
+    "movie": 732,
+    "time": "2026-05-11T10:49:12Z"
+  }
+},
+{
+  "model": "movies.theater",
+  "pk": 3,
+  "fields": {
+    "name": "Theater 3",
+    "movie": 726,
+    "time": "2026-05-12T10:49:54Z"
+  }
+},
+{
+  "model": "movies.theater",
+  "pk": 4,
+  "fields": {
+    "name": "Theater 4",
+    "movie": 731,
+    "time": "2026-05-12T10:50:34Z"
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 1,
+  "fields": {
+    "theater": 2,
+    "seat_number": "7",
+    "is_booked": false
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 2,
+  "fields": {
+    "theater": 1,
+    "seat_number": "1",
+    "is_booked": true
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 3,
+  "fields": {
+    "theater": 3,
+    "seat_number": "2",
+    "is_booked": false
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 4,
+  "fields": {
+    "theater": 4,
+    "seat_number": "3",
+    "is_booked": false
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 5,
+  "fields": {
+    "theater": 2,
+    "seat_number": "6",
+    "is_booked": false
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 6,
+  "fields": {
+    "theater": 3,
+    "seat_number": "5",
+    "is_booked": false
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 7,
+  "fields": {
+    "theater": 4,
+    "seat_number": "12",
+    "is_booked": false
+  }
+},
+{
+  "model": "movies.booking",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "seat": 1,
+    "movie": 725,
+    "theater": 1,
+    "amount": "250.00",
+    "status": "pending",
+    "booked_at": "2026-05-10T07:25:53.441Z"
+  }
+},
+{
+  "model": "movies.booking",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "seat": 6,
+    "movie": 725,
+    "theater": 1,
+    "amount": "250.00",
+    "status": "confirmed",
+    "booked_at": "2026-05-14T21:23:19.344Z"
+  }
+},
+{
+  "model": "movies.booking",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "seat": 4,
+    "movie": 686,
+    "theater": 2,
+    "amount": "250.00",
+    "status": "cancelled",
+    "booked_at": "2026-05-16T00:37:23.178Z"
+  }
+},
+{
+  "model": "movies.booking",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "seat": 2,
+    "movie": 725,
+    "theater": 1,
+    "amount": "250.00",
+    "status": "pending",
+    "booked_at": "2026-05-16T17:37:20.109Z"
+  }
+},
+{
+  "model": "movies.booking",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "seat": 5,
+    "movie": 695,
+    "theater": 3,
+    "amount": "250.00",
+    "status": "confirmed",
+    "booked_at": "2026-05-16T17:54:47.832Z"
+  }
+},
+{
+  "model": "movies.booking",
+  "pk": 6,
+  "fields": {
+    "user": 2,
+    "seat": 7,
+    "movie": 685,
+    "theater": 4,
+    "amount": "250.00",
+    "status": "confirmed",
+    "booked_at": "2026-05-16T18:07:41.183Z"
+  }
+},
+{
+  "model": "bookings.seatlock",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "show": 1,
+    "seat": 1,
+    "status": "expired",
+    "expires_at": "2026-05-10T17:42:10.695Z",
+    "created_at": "2026-05-10T07:25:53.397Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 1,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXNyXRvxUZKUldZ09BmTznw",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-15T15:48:35.892Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 2,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXOHKRvxUZKUldZ0tKhFQud",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-15T16:08:00.561Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 3,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXOLLRvxUZKUldZ1UKSdNBl",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-15T16:12:10.222Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 4,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXON9RvxUZKUldZ1nFhTP5C",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-15T16:14:01.489Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 5,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXOa5RvxUZKUldZ1EoLEXxz",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-15T16:27:23.255Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 6,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXPJGRvxUZKUldZ1B8LabiB",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-15T17:14:05.452Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 7,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXPaLRvxUZKUldZ0eFr6vaj",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-15T17:31:43.766Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 8,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXPeiRvxUZKUldZ0VWHOdAF",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "success",
+    "created_at": "2026-05-15T17:36:15.146Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 9,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXPkGRvxUZKUldZ0AKgV3aY",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "success",
+    "created_at": "2026-05-15T17:41:59.152Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 10,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXVKSRvxUZKUldZ1wwm0DDs",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "success",
+    "created_at": "2026-05-15T23:39:42.621Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 11,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXVS6RvxUZKUldZ0QKcMOh6",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "success",
+    "created_at": "2026-05-15T23:47:36.306Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 12,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXVg3RvxUZKUldZ0iOL17iy",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-16T00:02:01.152Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 13,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXW0vRvxUZKUldZ1mOMYwfo",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-16T00:23:35.368Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 14,
+  "fields": {
+    "booking": 2,
+    "provider_order_id": "pi_3TXW5xRvxUZKUldZ1Drm5ALO",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "failed",
+    "created_at": "2026-05-16T00:28:47.618Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 15,
+  "fields": {
+    "booking": 3,
+    "provider_order_id": "pi_3TXWFARvxUZKUldZ1F3IMPQE",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "failed",
+    "created_at": "2026-05-16T00:38:18.984Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 16,
+  "fields": {
+    "booking": 3,
+    "provider_order_id": "pi_3TXWRORvxUZKUldZ0LnOzfp1",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "failed",
+    "created_at": "2026-05-16T00:50:56.338Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 17,
+  "fields": {
+    "booking": 4,
+    "provider_order_id": "pi_3TXmCYRvxUZKUldZ1dtZu9PF",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "pending",
+    "created_at": "2026-05-16T17:40:38.522Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 18,
+  "fields": {
+    "booking": 5,
+    "provider_order_id": "pi_3TXmRMRvxUZKUldZ1uqrPmMW",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "success",
+    "created_at": "2026-05-16T17:55:56.383Z"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 19,
+  "fields": {
+    "booking": 6,
+    "provider_order_id": "pi_3TXme4RvxUZKUldZ0iEEW9Jl",
+    "provider_payment_id": null,
+    "amount": "250.00",
+    "status": "success",
+    "created_at": "2026-05-16T18:09:04.971Z"
+  }
+}
+]
