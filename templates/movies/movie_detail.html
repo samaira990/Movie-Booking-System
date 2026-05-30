@@ -63,29 +63,29 @@
         </p>
 
         <!-- 🎬 TRAILER -->
+        <p>Movie ID: {{ movie.id }}</p>
+        <p>Movie Name: {{ movie.name }}</p>
+        <p>Trailer URL: {{ movie.trailer_url }}</p>
+        <p>Embed URL: {{ movie.trailer_embed_url }}</p>
+
         {% if movie.trailer_embed_url %}
-          <h3 class="mt-4">🎬 Watch Trailer</h3>
+            <h3>🎬 Watch Trailer</h3>
 
-          <p>DEBUG: {{ movie.trailer_embed_url }}</p>
-
-          <div class="ratio ratio-16x9 my-3">
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/jNQXAC9IVRw"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-          </div>
-
+            <div class="ratio ratio-16x9 my-3">
+                <iframe
+                    width="100%"
+                    height="500"
+                    src="{{ movie.trailer_embed_url }}"
+                    title="Movie Trailer"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
         {% else %}
-          <p class="text-muted mt-3">Trailer not available</p>
+            <p class="text-danger">Trailer not available</p>
         {% endif %}
-
-        </div>
-        </div>
+      
     <!-- 🎟️ THEATERS -->
     <div class="mt-5">
 
