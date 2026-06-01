@@ -36,7 +36,7 @@ STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET")
 SECRET_KEY = 'django-insecure-b&3(e=lo8=nbtho1ykxwuy7p&az7$_4@5%+))s)$o$hn=(7*yv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -182,6 +182,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
