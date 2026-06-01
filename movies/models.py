@@ -75,9 +75,8 @@ class Theater(models.Model):
 
 
 class Seat(models.Model):
-    theater = models.ForeignKey(Theater, on_delete=models.CASCADE, related_name='seats')
+    theater = models.ForeignKey(Theater, on_delete=models.CASCADE)
     seat_number = models.CharField(max_length=10)
-    is_booked = models.BooleanField(default=False)
 
     class Meta:
         unique_together = ('theater', 'seat_number')

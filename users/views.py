@@ -6,8 +6,26 @@ from django.contrib.auth.decorators import login_required
 from movies.models import Movie , Booking
 
 def home(request):
-    movies= Movie.objects.all()
-    return render(request,'home.html',{'movies':movies})
+
+    movie_ids = [725, 726, 732, 731, 5733, 5734]
+
+    featured_movies = []
+
+    for movie_id in movie_ids:
+        try:
+            featured_movies.append(
+                Movie.objects.get(id=movie_id)
+            )
+        except Movie.DoesNotExist:
+            pass
+
+    return render(
+        request,
+        'home.html',
+        {
+            'featured_movies': featured_movies
+        }
+    )
 def register(request):
     if request.method == 'POST':
         form=UserRegisterForm(request.POST)

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Successful</title>
+
+    <style>
+        .box {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            text-align: center;
+            border-radius: 10px;
+            font-family: Arial;
+        }
+
+        .success {
+            color: green;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .qr {
+            margin-top: 20px;
+        }
+
+        .qr img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <div class="success">Payment Successful 🎉</div>
+
+    <p>Your booking has been confirmed.</p>
+
+    <p><strong>Movie:</strong> {{ booking.movie.name }}</p>
+    <p><strong>Seat:</strong> {{ booking.seat.seat_number }}</p>
+    <p><strong>Amount:</strong> ₹{{ booking.amount }}</p>
+
+    <!-- 🎟 QR CODE SECTION -->
+    {% if qr_code %}
+    <div class="qr">
+        <h3>Your Ticket QR</h3>
+        <img src="{{ qr_code }}" alt="QR Code">
+    </div>
+    {% endif %}
+
+    <a href="/profile/" class="btn">Go to Profile</a>
+
+</div>
+
+</body>
+</html>

@@ -18,23 +18,10 @@ class TheaterAdmin(admin.ModelAdmin):
 
 @admin.register(Seat)
 class SeatAdmin(admin.ModelAdmin):
-    list_display = ['theater', 'seat_number', 'is_booked']
-    list_filter = ['is_booked', 'theater']
+    list_display = ['theater', 'seat_number']
+    list_filter = ['theater']
     search_fields = ['seat_number', 'theater__name']
     list_per_page = 50
-
-    actions = ['mark_as_booked', 'mark_as_available']
-
-    def mark_as_booked(self, request, queryset):
-        updated = queryset.filter(is_booked=False).update(is_booked=True)
-        self.message_user(request, f"{updated} seats marked as booked")
-    mark_as_booked.short_description = "Mark selected seats as Booked"
-
-    def mark_as_available(self, request, queryset):
-        updated = queryset.filter(is_booked=True).update(is_booked=False)
-        self.message_user(request, f"{updated} seats marked as available")
-    mark_as_available.short_description = "Mark selected seats as Available"
-
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):

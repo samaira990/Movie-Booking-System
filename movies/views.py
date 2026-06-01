@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 from django.db.models import Count, Q
 from django.core.paginator import Paginator
+from .utils import generate_qr, send_booking_email
 
 
 def movie_list(request):
@@ -90,11 +91,16 @@ def movie_list(request):
         None
     )
 
+    featured_movies = Movie.objects.filter(
+        id__in=[725, 726, 731, 732, 5733,5734]
+    )
+
     return render(
         request,
         'movies/movie_list.html',
         {
             'movies': movies,
+            'featured_movies': featured_movies,
             'genre_counts': genre_counts,
             'language_counts': language_counts,
             'selected_genres': selected_genres,
@@ -102,6 +108,7 @@ def movie_list(request):
             'selected_sort': selected_sort,
             'search_query': search_query,
             'query_params': query_params.urlencode(),
+            
         }
     )
 
@@ -120,50 +127,82 @@ def book_seats(request, theater_id):
     theater = get_object_or_404(Theater, id=theater_id)
     seats = Seat.objects.filter(theater=theater)
 
+    # always compute booked seats
+    booked_seat_ids = Booking.objects.filter(
+        theater=theater
+    ).values_list('seat_id', flat=True)
+
     if request.method == 'POST':
+
+        print("========== POST RECEIVED ==========")
+        print(request.POST)
+
         selected_seats = request.POST.getlist('seats')
+
+        print("SELECTED SEATS:", selected_seats)
+
         error_seats = []
 
         if not selected_seats:
             return render(request, "movies/seat_selection.html", {
                 'theater': theater,
                 "seats": seats,
+                "booked_seat_ids": booked_seat_ids,
                 'error': "No seat selected"
             })
 
         for seat_id in selected_seats:
-            seat = get_object_or_404(Seat, id=seat_id, theater=theater)
 
-            if seat.is_booked:
-                error_seats.append(seat.seat_number)
+            print("PROCESSING SEAT:", seat_id)
+
+            seat = get_object_or_404(
+                Seat,
+                id=seat_id,
+                theater=theater
+            )
+
+            # ✅ correct check (NO is_booked anymore)
+            if Booking.objects.filter(seat=seat).exists():
+
+                print("ALREADY BOOKED:", seat.seat_number)
+
+                error_seats.append(str(seat.seat_number))
                 continue
 
             try:
-                Booking.objects.create(
+                booking = Booking.objects.create(
                     user=request.user,
                     seat=seat,
                     movie=theater.movie,
-                    theater=theater
+                    theater=theater,
+                    status="pending"
                 )
-                seat.is_booked = True
-                seat.save()
 
-            except IntegrityError:
-                error_seats.append(seat.seat_number)
+                print("BOOKING CREATED:", seat.seat_number)
+
+            except Exception as e:
+
+                print("========== ERROR ==========")
+                print(e)
+
+                error_seats.append(str(seat.seat_number))
 
         if error_seats:
             error_message = f"The following seats are already booked: {', '.join(error_seats)}"
+
             return render(request, 'movies/seat_selection.html', {
                 'theater': theater,
                 "seats": seats,
+                "booked_seat_ids": booked_seat_ids,
                 'error': error_message
             })
 
-        return redirect('profile')
+        return redirect('payment_page', booking_id=booking.id)
 
     return render(request, 'movies/seat_selection.html', {
         'theater': theater,
-        "seats": seats
+        "seats": seats,
+        "booked_seat_ids": booked_seat_ids
     })
 
 def movie_detail(request, movie_id):
@@ -173,4 +212,39 @@ def movie_detail(request, movie_id):
     return render(request, 'movies/movie_detail.html', {
         'movie': movie,
         'theaters': theaters
+    })
+
+
+@login_required(login_url='/login/')
+def payment_page(request, booking_id):
+    booking = get_object_or_404(
+        Booking,
+        id=booking_id,
+        user=request.user,
+        status="pending"
+    )
+
+    if request.method == "POST":
+
+        # prevent double confirmation (extra safety)
+        if booking.status == "confirmed":
+            return redirect('profile')
+
+        # confirm booking
+        booking.status = "confirmed"
+        booking.save()
+
+        # generate QR
+        qr_code = generate_qr(booking)
+
+        # send email
+        send_booking_email(booking)
+
+        return render(request, "payments/success.html", {
+            "booking": booking,
+            "qr_code": qr_code
+        })
+
+    return render(request, "payments/payment.html", {
+        "booking": booking
     })
