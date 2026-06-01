@@ -22,6 +22,22 @@
     margin-bottom: 5px;
   }
 
+  /* 🎬 Trailer Styling */
+  .trailer-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 25px auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .trailer-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: none;
+  }
+
+  /* 📱 Responsive */
   @media (max-width: 768px) {
 
     .movie-card {
@@ -36,6 +52,10 @@
     .btn-book {
       width: 100%;
       margin-top: 10px;
+    }
+
+    .trailer-container {
+      max-width: 100%;
     }
   }
 </style>
@@ -59,21 +79,16 @@
       <h2 class="movie-title">{{ movie.name }}</h2>
 
       <p>
-        <strong>⭐ Rating:</strong>
-        {{ movie.rating }}
+        <strong>⭐ Rating:</strong> {{ movie.rating }}
       </p>
 
       <p>
         <strong>🎭 Genres:</strong><br>
 
         {% for g in movie.genres.all %}
-          <span class="badge bg-danger">
-            {{ g.name }}
-          </span>
+          <span class="badge bg-danger">{{ g.name }}</span>
         {% empty %}
-          <span class="text-muted">
-            Not Available
-          </span>
+          <span class="text-muted">Not Available</span>
         {% endfor %}
       </p>
 
@@ -81,13 +96,9 @@
         <strong>🌐 Languages:</strong><br>
 
         {% for l in movie.languages.all %}
-          <span class="badge bg-primary">
-            {{ l.name }}
-          </span>
+          <span class="badge bg-primary">{{ l.name }}</span>
         {% empty %}
-          <span class="text-muted">
-            Not Available
-          </span>
+          <span class="text-muted">Not Available</span>
         {% endfor %}
       </p>
 
@@ -101,16 +112,13 @@
         {{ movie.description }}
       </p>
 
-      <!-- Trailer -->
+      <!-- 🎬 Trailer Section -->
       {% if movie.trailer_embed_url %}
 
-        <h4 class="mt-4">
-          🎬 Watch Trailer
-        </h4>
+        <h4 class="mt-4">🎬 Watch Trailer</h4>
 
-        <div class="ratio ratio-16x9 my-3">
+        <div class="trailer-container">
           <iframe
-            class="w-100"
             src="{{ movie.trailer_embed_url }}"
             title="Movie Trailer"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -133,9 +141,7 @@
   <!-- Available Shows -->
   <div class="mt-5">
 
-    <h3 class="mb-4">
-      🎟️ Available Shows
-    </h3>
+    <h3 class="mb-4">🎟️ Available Shows</h3>
 
     {% for t in theaters %}
 
@@ -144,20 +150,12 @@
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
 
           <div>
-            <h5 class="mb-1">
-              {{ t.name }}
-            </h5>
-
-            <small class="text-muted">
-              {{ t.time }}
-            </small>
+            <h5 class="mb-1">{{ t.name }}</h5>
+            <small class="text-muted">{{ t.time }}</small>
           </div>
 
           <div>
-            <a
-              href="{% url 'book_seats' t.id %}"
-              class="btn btn-success btn-book"
-            >
+            <a href="{% url 'book_seats' t.id %}" class="btn btn-success btn-book">
               Book Seats
             </a>
           </div>
