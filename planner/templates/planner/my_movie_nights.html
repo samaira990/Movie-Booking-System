@@ -1,0 +1,281 @@
+{% extends "users/basic.html" %}
+
+{% block title %}My Movie Nights{% endblock %}
+
+{% block content %}
+
+<div class="planner-bg py-5">
+
+  <div class="container">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-5">
+
+      <h1 class="planner-title">
+        🍿 My Movie Nights
+      </h1>
+
+      <p class="planner-subtitle">
+        All your upcoming movie plans in one place.
+      </p>
+
+    </div>
+
+    {% if movie_nights %}
+
+    <div class="row">
+
+      {% for night in movie_nights %}
+
+      <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="night-card">
+
+          <div class="night-poster">
+
+            {% if night.movie.image %}
+            <img src="{{ night.movie.image.url }}" alt="{{ night.movie.name }}">
+            {% endif %}
+
+          </div>
+
+          <div class="night-body">
+
+            <h3>
+
+              {{ night.movie.name }}
+
+            </h3>
+
+            <div class="night-info">
+
+              <p>
+
+                📅 {{ night.date }}
+
+              </p>
+
+              <p>
+
+                🕒 {{ night.time }}
+
+              </p>
+
+              <p>
+
+                📍 {{ night.venue_type }}
+
+              </p>
+
+            </div>
+
+            <a href="{% url 'planner:movie_night_detail' night.id %}" class="planner-btn">
+
+              View Details →
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty-state">
+
+      <div class="display-4 mb-3">
+
+        🍿
+
+      </div>
+
+      <h3>
+
+        No Movie Nights Yet
+
+      </h3>
+
+      <p>
+
+        Start planning your first movie night with friends.
+
+      </p>
+
+      <a href="{% url 'planner:create_movie_night' %}" class="planner-btn">
+
+        + Create Movie Night
+
+      </a>
+
+    </div>
+
+    {% endif %}
+
+  </div>
+
+</div>
+
+<style>
+  .planner-bg {
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #FFF7F2, #FDF2F8, #F8FAFC);
+
+  }
+
+  .planner-title {
+
+    font-size: 2.8rem;
+
+    font-weight: 700;
+
+    color: #222;
+
+  }
+
+  .planner-subtitle {
+
+    color: #666;
+
+    font-size: 18px;
+
+  }
+
+  .night-card {
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+    height: 100%;
+
+  }
+
+  .night-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 35px 60px rgba(0, 0, 0, .15);
+
+  }
+
+  .night-poster {
+
+    height: 340px;
+
+    overflow: hidden;
+
+  }
+
+  .night-poster img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+
+  }
+
+  .night-card:hover img {
+
+    transform: scale(1.08);
+
+  }
+
+  .night-body {
+
+    padding: 25px;
+
+  }
+
+  .night-body h3 {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+  }
+
+  .night-info p {
+
+    margin-bottom: 12px;
+
+    color: #555;
+
+    font-size: 15px;
+
+  }
+
+  .planner-btn {
+
+    display: inline-block;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    font-weight: 700;
+
+    background: linear-gradient(90deg, #FF512F, #DD2476);
+
+    transition: .3s;
+
+  }
+
+  .planner-btn:hover {
+
+    color: white;
+
+    text-decoration: none;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(221, 36, 118, .35);
+
+  }
+
+  .empty-state {
+
+    background: white;
+
+    padding: 70px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
+
+  }
+</style>
+
+{% endblock %}

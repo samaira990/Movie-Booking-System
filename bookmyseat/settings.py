@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     'payments',
     'notifications',
     'analytics',
+    'planner',
 ]
 
 CLOUDINARY_STORAGE = {
